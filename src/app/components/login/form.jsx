@@ -1,14 +1,13 @@
 'use client'
 import Image from "next/image";
 import logo from "../../../assets/logo.svg";
-import google from "../../../assets/login/google.svg";
-import face from "../../../assets/login/face.svg";
-import apple from "../../../assets/login/apple.svg";
 import mail from "../../../assets/login/mail.svg";
 import lock from "../../../assets/login/lock.svg";
 import view from "../../../assets/login/view.svg";
 import Link from "next/link";
 import { useState } from "react";
+import WithApps from "./withApps";
+import Button from "./button";
 
 export default function Form() {
     const [password, setPassword] = useState(false)
@@ -44,9 +43,7 @@ export default function Form() {
         </div>
         
         <span>Forgot password?</span>
-        <button className="bg-green py-2 px-14 rounded-[22px] font-bold shadow-xl mt-7 mb-2">
-          LOGIN
-        </button>
+        <Button mode="login"/>
         <div>
           <div className="flex items-center justify-center text-[14px] w-full mb-7">
             <input
@@ -55,19 +52,10 @@ export default function Form() {
             />
             <span> Remember me</span>
           </div>
-          <div className="flex items-center text-[12px] mb-3">
-            <hr className="border border-light-blue w-[82px] mr-2" />
-            <span>Or Sing In with</span>
-            <hr className="border border-light-blue w-[82px] ml-2" />
-          </div>
-          <div className="flex justify-center gap-5 mb-4">
-            <Link href="/"><Image src={google} alt="google" /></Link>
-            <Link href="/"><Image src={face} alt="facebook" /></Link>
-            <Link href="/"><Image src={apple} alt="apple" /></Link>
-          </div>
+          <WithApps mode="Log In" />
           <div className="flex gap-2 mb-4">
             <h2>Don&#39;t have an account</h2>
-            <Link href="/singin" className="underline">
+            <Link href="/signin" className="underline">
               Create One
             </Link>
           </div>
