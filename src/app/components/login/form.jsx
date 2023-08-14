@@ -41,8 +41,7 @@ export default function Form() {
           <Image src={view} alt="view"/>
           </button>
         </div>
-        
-        <span>Forgot password?</span>
+        <Link href="login/accountRecovery" className="hover:underline">Forgot password?</Link>
         <Button path="/" mode="login"/>
         <div>
           <div className="flex items-center justify-center text-[14px] w-full mb-7">
