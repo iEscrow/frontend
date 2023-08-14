@@ -60,7 +60,7 @@ export default function Register() {
           </button>
         </div>
         <div className="mb-3">
-          <Button path="/confirmEmail" mode="register" />
+          <Button path="signin/confirmEmail" mode="register" />
         </div>
         <WithApps mode="Sign In" />
       </div>
