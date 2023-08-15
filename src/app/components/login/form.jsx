@@ -16,7 +16,7 @@ export default function Form() {
         setPassword(!password)
     }
   return (
-    <form className="w-[20%]">
+    <form>
       <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
