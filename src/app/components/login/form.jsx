@@ -43,7 +43,7 @@ export default function Form() {
         </div>
         
         <span>Forgot password?</span>
-        <Button mode="login"/>
+        <Button path="/" mode="login"/>
         <div>
           <div className="flex items-center justify-center text-[14px] w-full mb-7">
             <input
