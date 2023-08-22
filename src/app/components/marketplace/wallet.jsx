@@ -5,17 +5,19 @@ import plus from "../../../assets/btn-plus.svg";
 
 const Wallet = () => {
   return (
-    <div className="flex flex-col ">
-      <div className="flex gap-4">
-        <input
-          type="radio"
-          name="radio-10"
-          className="radio checked:bg-green"
-          checked
-        />
-        <div className="flex flex-col">
-          <span className="label-text text-white">iEscrow</span>
-          <p className="text-green">0xj865ece9mwJKdPB5Kbhv4JiSemFCu</p>
+    <div>
+      <div className="flex justify-between">
+        <div className="flex gap-4">
+          <input
+            type="radio"
+            name="radio-10"
+            className="radio checked:bg-green"
+            checked
+          />
+          <div className="flex flex-col">
+            <span className="label-text text-white">iEscrow</span>
+            <p className="text-green">0xj865ece9mwJKdPB5Kbhv4JiSemFCu</p>
+          </div>
         </div>
         <div className="dropdown dropdown-right">
           <button tabIndex={0} className="btn btn-ghost">
@@ -36,16 +38,18 @@ const Wallet = () => {
         </div>
       </div>
       <div className="divider"></div>
-      <div className="flex gap-4">
-        <input
-          type="radio"
-          name="radio-10"
-          className="radio checked:bg-green"
-          checked
-        />
-        <div className="flex flex-col">
-          <span className="label-text text-white">Binance</span>
-          <p className="text-green">0xj865ece9mwJKdPB5Kbhv4JiSemFCu</p>
+      <div className="flex justify-between">
+        <div className="flex gap-4">
+          <input
+            type="radio"
+            name="radio-10"
+            className="radio checked:bg-green"
+            checked
+          />
+          <div className="flex flex-col">
+            <span className="label-text text-white">Binance</span>
+            <p className="text-green">0xj865ece9mwJKdPB5Kbhv4JiSemFCu</p>
+          </div>
         </div>
         <div className="dropdown dropdown-right">
           <button tabIndex={0} className="btn btn-ghost">

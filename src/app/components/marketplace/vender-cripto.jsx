@@ -1,8 +1,10 @@
 import React from "react";
+import Link from 'next/link';
 
 const VenderCripto = () => {
   return (
-    <div className="p-20 flex flex-col items-center w-2/4">
+    <div className="flex flex-col items-center w-full">
+       <div className="backdrop-opacity-10 bg-green/20 w-1/3 p-10 rounded-2xl flex flex-col justify-center items-center">
       <div className="flex flex-col gap-6 text-white">
         <div>
           <p>Enviar</p>
@@ -57,10 +59,11 @@ const VenderCripto = () => {
       <div className="divider"></div>
       <div className="flex justify-between w-2/5">
         <button className="btn btn-sm btn-neutral rounded-full">ATRAS</button>
+        <Link href="/marketplace/seleccion">
         <button className="btn btn-sm btn-accent rounded-full">
           SIGUIENTE
-        </button>
-      </div>
+        </button></Link>
+      </div></div>
     </div>
   );
 };
