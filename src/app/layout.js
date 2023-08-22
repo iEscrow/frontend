@@ -1,8 +1,8 @@
-import { Rubik } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Nav from "./components/Nav/Nav";
 import "./globals.css";
 
-const rubik = Rubik({ style: ["normal"], subsets: ["latin-ext"] });
+const poppins = Poppins({ style: ["normal"], subsets: ["latin-ext"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
 
 export const metadata = {
   title: "iEscrow",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} dark:text-white text-dark-blue`}>
+      <body className={`${poppins.className} dark:text-white text-dark-blue`}>
         <Nav />
         {children}
       </body>
