@@ -1,14 +1,16 @@
 import Image from "next/image";
 import logo from "../../../assets/logo.svg";
+import logoDark from "../../../assets/logo-dark.svg";
 import candado from "../../../assets/candado.svg";
 
 export default function Header() {
   return (
     <div className="w-full gap-y-10">
       <div className="flex items-center md:items-start mb-16">
-        <Image src={logo} className="w-[150px] md:w-[250px]" alt="logo" />
+        <Image src={logo} className="w-[150px] md:w-[250px] hidden  dark:flex" alt="logo" />
+        <Image src={logoDark} className="w-[150px] md:w-[250px] dark:hidden " alt="logo" />
       </div>
-      <div className="text-white w-full flex items-center md:items-start flex-row">
+      <div className=" w-full flex items-center md:items-start flex-row">
         <div className="w-full md:w-[30%] text-center md:text-start">
           <p className="text-[24px] font-light leading-tight mb-4  md:text-[36px]">
             Intercambia tus activos de la forma mas segura

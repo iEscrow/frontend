@@ -5,7 +5,7 @@ import Userlog from "./Userlog";
 
 const Nav = () => {
   return (
-    <div className="navbar bg-base-900 text-white font-medium">
+    <div className="navbar bg-base-900  font-medium z-20">
       <div className="navbar-start">
         <div className="drawer z-10">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
