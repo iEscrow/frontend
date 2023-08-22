@@ -1,8 +1,20 @@
+import Image from "next/image";
 import React from "react";
-
+import logo from "../../../assets/logo.svg";
+import logoDark from "../../../assets/logo-dark.svg";
 const VenderCripto = () => {
   return (
     <div className="p-20 flex flex-col items-center w-2/4">
+        <Image
+          src={logo}
+          className="w-[150px] md:w-[250px] hidden mb-24 dark:flex"
+          alt="logo"
+        />
+        <Image
+          src={logoDark}
+          className="w-[150px] md:w-[250px] mb-24 dark:hidden "
+          alt="logo"
+        />
       <div className="flex flex-col gap-6 text-white">
         <div>
           <p>Enviar</p>

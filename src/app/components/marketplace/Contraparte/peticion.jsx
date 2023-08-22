@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import logo from "../../../../assets/logo.svg";
 import logoDark from "../../../../assets/logo-dark.svg";
+import Link from "next/link";
 export default function Peticiion({ children, get, send }) {
   return (
     <div className="flex flex-col items-center max-h-[90vh]">
@@ -36,12 +37,12 @@ export default function Peticiion({ children, get, send }) {
       <div className="w-[531px]">
         <hr className="border border-[#2E75A9] w-full mb-6" />
         <div className="flex justify-between">
-          <button className="uppercase bg-dark-blue px-8 py-1 rounded-[20px]">
+          <Link href="/marketplace" className="uppercase bg-dark-blue px-8 py-1 rounded-[20px]">
             Atras
-          </button>
-          <button className="uppercase bg-green px-8 py-1 rounded-[20px]">
+          </Link>
+          <Link href="/" className="uppercase bg-green px-8 py-1 rounded-[20px]">
             Aceptar Escrow
-          </button>
+          </Link>
         </div>
       </div>
     </div>
