@@ -4,6 +4,8 @@ import more from "../../../assets/more-vertical.svg";
 import plus from "../../../assets/btn-plus.svg";
 import arrowUp from "../../../assets/arrow-up.svg";
 import arrowDown from "../../../assets/arrow-down.svg";
+import edit from "@/assets/btn-edit.svg"
+import delet from "@/assets/btn-delete.svg"
 import { useState } from "react";
 
 const Cuenta = () => {
@@ -30,13 +32,19 @@ const Cuenta = () => {
           </button>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-dark-blue rounded-b-lg w-52 text-white"
+            className="dropdown-content z-[1] menu p-2 shadow bg-dark-blue rounded-b-lg w-52 text-white uppercase"
           >
             <li>
+            <div className="flex gap-3">
+              <Image src={edit} alt="logo" />
               <a>Editar</a>
+            </div>
             </li>
             <li>
+            <div className="flex gap-3">
+              <Image src={delet} alt="logo" />
               <a>Eliminar</a>
+            </div>
             </li>
           </ul>
         </div>
