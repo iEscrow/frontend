@@ -69,10 +69,11 @@ const VenderCripto = () => {
       <div className="divider"></div>
       <div className="flex justify-between w-2/5">
         <button className="btn btn-sm btn-neutral rounded-full">ATRAS</button>
+        <Link href="/marketplace/seleccion">
         <button className="btn btn-sm btn-accent rounded-full">
           SIGUIENTE
-        </button>
-      </div>
+        </button></Link>
+      </div></div>
     </div>
   );
 };

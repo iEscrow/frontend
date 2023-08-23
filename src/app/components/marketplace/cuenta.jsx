@@ -13,9 +13,9 @@ const Cuenta = () => {
     setIsCollapsed(!isCollapsed);
   };
   return (
-    <div className="flex flex-col w-1/5">
+    <div>
       <div className="flex w-full justify-between">
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-4 items-center">
           <input
             type="radio"
             name="radio-10"
@@ -52,9 +52,10 @@ const Cuenta = () => {
           CBU: <b className="text-white">0000321XXXXX4684351</b>
         </p>
       </div>
-      <div className="flex items-center my-4">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <div className="mx-4 text-gray-400">
+      
+      <div className="flex items-center">
+        <div className="flex-grow divider"></div>
+        <div>
           <Image
             src={isCollapsed ? arrowDown : arrowUp}
             className="w-[20px] md:w-[20px]"
@@ -62,7 +63,7 @@ const Cuenta = () => {
             onClick={() => toggleCollapse()}
           />
         </div>
-        <div className="flex-grow border-t border-gray-300"></div>
+        <div className="flex-grow divider"></div>
       </div>
 
       <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white rounded-full">
