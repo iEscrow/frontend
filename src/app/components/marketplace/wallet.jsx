@@ -27,7 +27,7 @@ const Wallet = () => {
 
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-dark-blue rounded-b-lg w-52 text-white uppercase"
+            className="dropdown-content z-[1] menu p-2 shadow bg-[#414141] rounded-b-lg w-52 text-white uppercase"
           >
             <li>
             <div className="flex gap-3">
@@ -44,7 +44,7 @@ const Wallet = () => {
           </ul>
         </div>
       </div>
-      <div className="border-t border-[#2E75A9] my-5 w-full" />
+      <div className="divider"/>
       <div className="flex justify-between">
         <div className="flex gap-4">
           <input
@@ -65,7 +65,7 @@ const Wallet = () => {
 
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-dark-blue rounded-b-lg w-52 text-white uppercase"
+            className="dropdown-content z-[1] menu p-2 shadow bg-[#414141] rounded-b-lg w-52 text-white uppercase"
           >
             <li>
             <div className="flex gap-3">
@@ -82,8 +82,8 @@ const Wallet = () => {
           </ul>
         </div>
       </div>
-      <div className="border-t border-[#2E75A9] my-5 w-full" />
-      <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white rounded-full">
+      <div className="divider"/>
+      <button className="btn btn-ghost btn-sm w-48 bg-[#414141] text-white rounded-full">
         <Image src={plus} className="w-[20px] md:w-[20px]" alt="logo" /> AGREGAR
         WALLET
       </button>

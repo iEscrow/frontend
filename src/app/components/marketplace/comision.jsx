@@ -5,7 +5,7 @@ export default function Comision() {
     <div className="flex flex-col gap-1">
       <p>% DE COMISIÓN</p>
       <div className="flex gap-x-3">
-        <input type="text" className="input w-[86px] h-[36px] bg-white" />
+        <input type="text" className="input w-[86px] h-[36px] bg-[#2D2D2D]" />
         <div className="dropdown dropdown-hover dropdown-top cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +28,10 @@ export default function Comision() {
           </p>
         </div>
       </div>
-      <div className="border-t border-[#2E75A9] my-5 w-full" />
+      <div className="divider"/>
       <p>USDT TOTAL</p>
       <div className="flex gap-x-3">
-        <input type="text" className="input w-[172px] h-[36px] bg-white" />
+        <input type="text" className="input w-[172px] h-[36px] bg-[#2D2D2D]" />
         <div className="dropdown dropdown-hover dropdown-top cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"

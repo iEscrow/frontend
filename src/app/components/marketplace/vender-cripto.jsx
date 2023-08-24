@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import logo from "../../../assets/logo.svg";
 import logoDark from "../../../assets/logo-dark.svg";
+import Link from "next/link";
 const VenderCripto = () => {
   return (
     <div className="p-20 flex flex-col items-center w-2/4">
@@ -73,8 +74,9 @@ const VenderCripto = () => {
         <button className="btn btn-sm btn-accent rounded-full">
           SIGUIENTE
         </button></Link>
-      </div></div>
-    </div>
+      </div>
+      </div>
+    
   );
 };
 

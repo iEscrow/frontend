@@ -32,7 +32,7 @@ export default function Seleccion() {
             <Wallet />
           </div>
         </div>
-        <div className="border-t border-[#2E75A9] my-5 w-full" />
+        <div className="divider"/>
         <div className="flex flex-col gap-4 w-full">
           <div>
             <p className="text-white text-lg">
@@ -44,20 +44,20 @@ export default function Seleccion() {
             <Cuenta />
           </div>
         </div>
-        <div className="border-t border-[#2E75A9] my-5 w-full" />
+        <div className="divider"/>
         <MontoEnviar />
-        <div className="border-t border-[#2E75A9] my-5 w-full" />
+        <div className="divider"/>
         <Comision />
-        <div className="border-t border-[#2E75A9] my-5 w-full" />
+        <div className="divider"/>
         <div className="flex justify-between w-full font-semibold text-lg">
           <Link
-            className="px-9 py-1 bg-dark-blue rounded-full"
+            className="px-9 py-1 bg-[#414141] rounded-full"
             href="/marketplace/comprar-cripto"
           >
             ATRAS
           </Link>
           <Link
-            className="px-9 py-1 bg-green rounded-full"
+            className="px-9 py-1 bg-[#1B80A4] rounded-full"
             href="/marketplace/comprar-cripto/publicar"
           >
             PUBLICAR ESCROW
