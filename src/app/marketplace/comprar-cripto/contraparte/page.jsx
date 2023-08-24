@@ -2,7 +2,13 @@ import Peticiion from "../../../components/marketplace/Contraparte/peticion";
 
 export default function Contraparte() {
   return (
-    <Peticiion get={"$ 28.000,00 ARS"} send={"100 USDT"}>
+    <Peticiion
+      page={"Petición de Escrow"}
+      get={"$ 28.000,00 ARS"}
+      send={"100 USDT"}
+      back={"/marketplace"}
+      next={"/marketplace/comprar-cripto/contraparte/seleccion"}
+    >
       <h3 className="text-lg mb-2">
         Recibirás una transferencia desde la siguiente cuenta bancaria:
       </h3>
