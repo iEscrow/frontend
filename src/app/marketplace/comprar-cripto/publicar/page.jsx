@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function publicar() {
   return (
-    <div>
+    <div className="min-h-[90vh]">
       <div className="ml-[36%] mb-12">
         <Image
           src={logo}

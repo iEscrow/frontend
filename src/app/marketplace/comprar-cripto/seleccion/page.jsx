@@ -10,7 +10,7 @@ import React from "react";
 
 export default function Seleccion() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center min-h-[90vh]">
       <div className="w-[40%] flex flex-col justify-center">
         <div className="flex flex-col gap-4 w-full">
         <Image
