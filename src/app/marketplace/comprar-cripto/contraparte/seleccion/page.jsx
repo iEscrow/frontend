@@ -13,17 +13,17 @@ export default function Seleccion() {
       next={"/marketplace/comprar-cripto/contraparte/publicar"}
     >
       <div>
-        <p className="text-white text-lg mb-4">
+        <p className="text-white md:text-lg mb-4">
           Selecciona la cuenta con la cual recibirás la tranferencia bancaria:
         </p>
-        <div className="ml-14">
+        <div className="md:ml-14">
           <Cuenta />
         </div>
         <div className="divider" />
-        <p className="text-white text-lg mb-4">
+        <p className="text-white md:text-lg mb-4">
           Selecciona la wallet con la cual enviarás (Token):
         </p>
-        <div className="ml-14 mb-4">
+        <div className="md:ml-14 mb-4">
           <Wallet />
         </div>
       </div>
