@@ -10,8 +10,8 @@ import React from "react";
 
 export default function Seleccion() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[90vh]">
-      <div className="w-[40%] flex flex-col justify-center">
+    <div className="flex flex-col md:items-center md:min-h-[90vh]">
+      <div className=" md:w-[40%] sm:p-4 md:p-10 flex flex-col justify-center  ">
         <div className="flex flex-col gap-4 w-full">
         <Image
           src={logo}
@@ -24,23 +24,23 @@ export default function Seleccion() {
           alt="logo"
         />
           <div>
-            <p className="text-white text-lg">
+            <p className="text-white sm:text-sm md:text-md">
               Selecciona la wallet con la cual recibirás el (token):
             </p>
           </div>
-          <div className="ml-14 w-[60%]">
+          <div className="md:ml-14 md:w-[60%]">
             <Wallet />
           </div>
         </div>
         <div className="divider"/>
         <div className="flex flex-col gap-4 w-full">
           <div>
-            <p className="text-white text-lg">
+            <p className="text-white sm:text-sm md:text-md">
               Selecciona la cuenta con la cual realizarás la tranferencia
               bancaria:
             </p>
           </div>
-          <div className="ml-14 w-[60%]">
+          <div className="md:ml-14 md:w-[60%]">
             <Cuenta />
           </div>
         </div>
@@ -49,9 +49,9 @@ export default function Seleccion() {
         <div className="divider"/>
         <Comision />
         <div className="divider"/>
-        <div className="flex justify-between w-full font-semibold text-lg">
+        <div className="flex justify-between w-full font-semibold md:text-lg">
           <Link
-            className="px-9 py-1 bg-[#414141] rounded-full"
+            className="px-9 py-1  bg-[#414141] rounded-full"
             href="/marketplace/comprar-cripto"
           >
             ATRAS

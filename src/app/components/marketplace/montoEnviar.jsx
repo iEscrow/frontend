@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function MontoEnviar() {
   return (
-    <div className="flex flex-col  w-[50%] gap-4">
+    <div className="flex flex-col  md:w-[50%] gap-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
               <p className="text-white -mb-1 ">Monto a Enviar</p>

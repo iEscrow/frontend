@@ -17,7 +17,7 @@ const Cuenta = () => {
   return (
     <div>
       <div className="flex w-full justify-between">
-        <div className="flex gap-4 items-center">
+        <div className="flex sm:gap-2 md:gap-4 items-center">
           <input
             type="radio"
             name="radio-10"
@@ -26,7 +26,7 @@ const Cuenta = () => {
           />
           <span className="label-text text-white">BBVA</span>
         </div>
-        <div className="dropdown dropdown-right">
+        <div className="dropdown sm:dropdown-left md:dropdown-right">
           <button tabIndex={0} className="btn btn-ghost">
             <Image src={more} className="w-[20px] md:w-[20px]" alt="logo" />
           </button>
@@ -49,14 +49,14 @@ const Cuenta = () => {
           </ul>
         </div>
       </div>
-      <div className={`${isCollapsed ? "hidden" : "flex flex-col ml-12"}`}>
-        <p className="text-green">
+      <div className={`${isCollapsed ? "hidden" : "flex flex-col sm:ml-10 md:ml-12"}`}>
+        <p className="text-green sm:text-sm md:text-md">
           Titular: <b className="text-white">Facundo salas</b>
         </p>
-        <p className="text-green">
+        <p className="text-green sm:text-sm md:text-md">
           Número de cuenta: <b className="text-white">3216XXXXXXXXX4351</b>
         </p>
-        <p className="text-green">
+        <p className="text-green sm:text-sm md:text-md">
           CBU: <b className="text-white">0000321XXXXX4684351</b>
         </p>
       </div>
@@ -74,7 +74,7 @@ const Cuenta = () => {
         <div className="flex-grow divider"></div>
       </div>
 
-      <button className="btn btn-ghost btn-sm w-48 bg-[#414141] text-white rounded-full">
+      <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white text-xs md:text-sm rounded-full">
         <Image src={plus} className="w-[20px] md:w-[20px]" alt="logo" /> AGREGAR
         CUENTA
       </button>

@@ -5,7 +5,7 @@ import logoDark from "../../../assets/logo-dark.svg";
 import Link from "next/link";
 const VenderCripto = () => {
   return (
-    <div className="p-20 flex flex-col items-center w-2/4">
+    <div className=" flex flex-col items-center w-2/4 sm:w-full md:w-1/3 sm:p-4 md:p-10  justify-center">
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden mb-24 dark:flex"
@@ -21,26 +21,18 @@ const VenderCripto = () => {
           <p>Enviar</p>
           <select className="select w-60 bg-white text-blue">
             <option>BTC</option>
-            <option>USDT</option>
-            <option>USDC</option>
-            <option>ETH</option>
-            <option>BNB</option>
           </select>
         </div>
         <div>
           <p>Recibir</p>
           <select className="select w-60 bg-white text-blue">
-            <option>Transferencia bancaria</option>
             <option>USDT</option>
-            <option>USDC</option>
-            <option>ETH</option>
-            <option>BNB</option>
           </select>
         </div>
       </div>
       <div className="divider"></div>
-      <div className="flex flex-col gap-6">
-        <div className="flex gap-4">
+      <div className="flex md:flex-col gap-6">
+        <div className="flex items-center gap-4">
           <input
             type="radio"
             name="radio-10"
@@ -49,11 +41,11 @@ const VenderCripto = () => {
           />
           <div className="flex flex-col">
             <span className="label-text text-white">PRIVADO</span>
-            <p>Ya tengo la contraparte.</p>
-            <p>No figurará en el Marketplace.</p>
+            <p className="sm:hidden md:flex">Ya tengo la contraparte.</p>
+            <p className="sm:hidden md:flex">No figurará en el Marketplace.</p>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           <input
             type="radio"
             name="radio-10"
@@ -62,13 +54,13 @@ const VenderCripto = () => {
           />
           <div className="flex flex-col">
             <span className="label-text text-white">PÚBLICO</span>
-            <p>No tengo la contraparte.</p>
-            <p>Se listará en el Marketplace.</p>
+            <p className="sm:hidden md:flex">No tengo la contraparte.</p>
+            <p className="sm:hidden md:flex">Se listará en el Marketplace.</p>
           </div>
         </div>
       </div>
       <div className="divider"></div>
-      <div className="flex justify-between w-2/5">
+      <div className="flex justify-around w-full">
         <button className="btn btn-sm btn-neutral rounded-full">ATRAS</button>
         <Link href="/marketplace/seleccion">
         <button className="btn btn-sm btn-accent rounded-full">

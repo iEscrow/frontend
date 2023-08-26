@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function publicar() {
   return (
-    <div className="min-h-[90vh]">
-      <div className="ml-[36%] mb-12">
+    <div className="md:min-h-[90vh] sm:min-h-screen">
+      <div className="md:ml-[36%] md:mb-12 sm:mb-5 sm:flex justify-center">
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden  dark:flex"
@@ -19,7 +19,7 @@ export default function publicar() {
           alt="logo"
         />
       </div>
-      <div className="bg-green w-full flex justify-center gap-10 py-4 font-medium text-[18px] text-dark-blue ">
+      <div className="bg-green w-full flex md:justify-center sm:gap-2 md:gap-10 py-4 sm:px-2 font-medium md:text-[18px] sm:text-sm text-dark-blue ">
         <div>
           <h3>FACUNDO.SALAS (reput)</h3>
           <h3>Escrow #102212</h3>
@@ -33,26 +33,26 @@ export default function publicar() {
           <h3>100 USDT</h3>
         </div>
       </div>
-      <div className=" flex flex-col ml-[36%] mt-12 gap-6">
-        <h1 className="text-4xl text-green">Escrow Publicado!</h1>
-        <h3 className="text-lg">
+      <div className=" flex flex-col md:ml-[36%]  sm:ml-4 mt-12 gap-6">
+        <h1 className="md:text-4xl sm:text-lg text-green">Escrow Publicado!</h1>
+        <h3 className="md:text-lg sm:text-sm">
           Tu escrow ya se encuentra publicado en el Marketplace
         </h3>
         <div className="flex gap-1">
-          <h3 className="text-lg">Podrás visualizarlo</h3>
-          <Link className="text-lg underline " href="/">
+          <h3 className="md:text-lg sm:text-sm">Podrás visualizarlo</h3>
+          <Link className="md:text-lg sm:text-sm underline " href="/">
             aquí.
           </Link>
         </div>
-        <h3 className="text-lg">
+        <h3 className="md:text-lg sm:text-sm">
           Te notificaremos cuando un usuario quiera completar el intercambio.
         </h3>
-        <h3 className="text-2xl">Gracias por utilizar iEscrow!</h3>
+        <h3 className="md:text-2xl sm:text-base">Gracias por utilizar iEscrow!</h3>
       </div>
-      <div className="flex gap-5 justify-center mt-32 text-lg font-semibold">
-        <Link href="/" className="rounded-full bg-dark-blue shadow-sm px-5 py-2">MIS ESCROWS</Link>
-        <Link href="/" className="rounded-full bg-dark-blue shadow-sm px-5 py-2">MARKETPLACE</Link>
-        <Link href="/" className="rounded-full bg-dark-blue shadow-sm px-5 py-2">NUEVO ESCROW</Link>
+      <div className="flex md:gap-5 sm:gap-3 justify-center md:mt-32 sm:mt-12 md:text-lg sm:text-xs md:font-semibold">
+        <Link href="/" className="rounded-full bg-dark-blue shadow-sm md:px-5 sm:px-2 sm:py-1 md:py-2">MIS ESCROWS</Link>
+        <Link href="/" className="rounded-full bg-dark-blue shadow-sm md:px-5 sm:px-2 sm:py-1 md:py-2">MARKETPLACE</Link>
+        <Link href="/" className="rounded-full bg-dark-blue shadow-sm md:px-5 sm:px-2 sm:py-1 md:py-2">NUEVO ESCROW</Link>
       </div>
     </div>
   );
