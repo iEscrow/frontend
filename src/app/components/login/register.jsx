@@ -28,12 +28,12 @@ export default function Register() {
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
       <div className="bg-[#37d1f44f] text-white rounded-b-xl flex flex-col items-center px-[60px]">
-        <h2 className="my-6 md:text-[24px] font-semibold">Create account</h2>
+        <h2 className="my-6 md:text-2xl sm:text-lg font-semibold">Create account</h2>
         {ph.map(p => {
           return (
             <input
             key={p.placeholder}
-          className="bg-white border-none rounded-full text-dark-gray py-3 mb-4 w-full pl-4 focus:outline-none"
+          className="bg-white border-none rounded-full sm:text-sm text-dark-gray py-3 mb-4 w-full pl-4 focus:outline-none"
           type={p.type}
           placeholder={p.placeholder}
         />
@@ -45,7 +45,7 @@ export default function Register() {
             type={password ? "text" : "password"}
             placeholder="Password"
           />
-          <button onClick={togglePassword} className="absolute my-4 ml-56">
+          <button onClick={togglePassword} className="absolute my-4 md:ml-56 sm:ml-52">
           <Image src={view} alt="view"/>
           </button>
         </div>
@@ -55,7 +55,7 @@ export default function Register() {
             type={password ? "text" : "password"}
             placeholder="Confirm Password"
           />
-          <button onClick={togglePassword} className="absolute my-4 ml-56">
+          <button onClick={togglePassword} className="absolute my-4 md:ml-56 sm:ml-52">
           <Image src={view} alt="view"/>
           </button>
         </div>

@@ -16,12 +16,12 @@ export default function Form() {
         setPassword(!password)
     }
   return (
-    <form>
+    <form className="max-md:px-4">
       <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
       <div className=" shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] bg-light-blue/50 rounded-b-xl flex flex-col items-center px-[60px]">
-        <h2 className="my-6 md:text-[24px] font-semibold">Log In</h2>
+        <h2 className="my-6 md:text-2xl sm:text-lg font-semibold">Log In</h2>
         <div className="flex w-full text-dark-gray">
             <Image src={mail} className="absolute my-4 ml-4" alt="mail" />
           <input
@@ -37,14 +37,14 @@ export default function Form() {
             type={password ? "text" : "password"}
             placeholder="Password"
           />
-          <button onClick={togglePassword} className="absolute my-4 ml-56">
+          <button onClick={togglePassword} className="absolute my-4 md:ml-56 sm:ml-52">
           <Image src={view} alt="view"/>
           </button>
         </div>
         <Link href="login/accountRecovery" className="hover:underline">Forgot password?</Link>
         <Button path="/" mode="login"/>
         <div>
-          <div className="flex items-center justify-center text-[14px] w-full mb-7">
+          <div className="flex items-center justify-center md:text-sm sm:text-xs w-full mb-7">
             <input
               type="checkbox"
               className="checkbox checkbox-xs border-white border mr-2"
@@ -52,7 +52,7 @@ export default function Form() {
             <span> Remember me</span>
           </div>
           <WithApps mode="Log In" />
-          <div className="flex gap-2 mb-4">
+          <div className="flex gap-2 mb-4 sm:text-xs">
             <h2>Don&#39;t have an account</h2>
             <Link href="/signin" className="underline">
               Create One
