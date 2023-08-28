@@ -9,7 +9,7 @@ export default function Orden({ name, send, method, price }) {
           <Image src={profile} alt="profile" />
           <p className="text-sm">{name}</p>
         </div>
-        <div className="ml-10">
+        <div className="pl-10">
         <div className="flex gap-5">
           <p className="text-light-blue text-lg">ENVÍA</p>
           <p className="text-lg">{send}</p>
@@ -34,7 +34,7 @@ export default function Orden({ name, send, method, price }) {
         <p className="text-sm">{method}</p>
         </div>
       </div>
-      <div className="bg-green w-8 flex flex-col justify-center items-center rounded-t-full rounded-b-full py-2 text-xs space-y-[-4px] h-full">
+      <button className="bg-green text-dark-blue w-8 flex flex-col justify-center items-center rounded-t-full rounded-b-full py-2 text-xs font-semibold space-y-[-4px] ">
         <p>C</p>
         <p>O</p>
         <p>M</p>
@@ -42,7 +42,7 @@ export default function Orden({ name, send, method, price }) {
         <p>R</p>
         <p>A</p>
         <p>R</p>
-      </div>
+      </button>
     </div>
   );
 }

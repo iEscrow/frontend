@@ -41,7 +41,7 @@ export default function Marketplace() {
     },
   ];
   return (
-    <div className="flex flex-col gap-12 justify-center items-center">
+    <div className="flex flex-col gap-12 justify-center items-center p-4">
       <Image
         src={logo}
         className="w-[150px] md:w-[250px] hidden  dark:flex"
@@ -79,7 +79,7 @@ export default function Marketplace() {
           <option>VENEZUELA</option>
         </select>
       </div>
-      <div className="flex flex-col md:w-[35%] gap-3 mb-3 ">
+      <div className="flex flex-col md:w-[35%] gap-3 ">
         <div className="flex justify-end">
           <select className="select select-ghost w-fit max-w-xs">
             <option disabled selected>
