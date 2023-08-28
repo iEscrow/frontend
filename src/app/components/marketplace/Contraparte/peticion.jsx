@@ -1,9 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import logo from "../../../../assets/logo.svg";
-import logoDark from "../../../../assets/logo-dark.svg";
 import Link from "next/link";
-export default function Peticiion({
+import Botones from "../botones";
+export default function Peticion({
   children,
   page,
   get,
@@ -12,37 +9,25 @@ export default function Peticiion({
   next = "/",
 }) {
   return (
-    <div className="flex flex-col md:items-center md:min-h-[90vh] sm:min-h-[85vh]">
-      <div className="flex flex-col gap-9 md:w-[531px] max-md:items-center mb-9">
-        <Image
-          src={logo}
-          className="w-[150px] md:w-[250px] hidden  dark:flex"
-          alt="logo"
-        />
-        <Image
-          src={logoDark}
-          className="w-[150px] md:w-[250px] dark:hidden "
-          alt="logo"
-        />
+    <>
+      <div className="flex mb-6 w-full">
         <h1 className="md:text-4xl sm:text-2xl text-green">{page}</h1>
       </div>
-      <div className="bg-green w-full flex md:justify-center sm:gap-2 md:gap-10 py-4 sm:px-2 font-medium md:text-[18px] sm:text-sm text-dark-blue">
-        <div>
+      <div className="w-full flex sm:flex-col md:flex-row justify-between p-6 font-medium bg-green text-dark-blue mb-10 gap-2">
+        <div className="flex flex-col">
           <h3>FACUNDO.SALAS (reput)</h3>
           <h3>Escrow #102212</h3>
         </div>
-        <div>
+        <div className="flex sm:flex-col md:items-center">
           <h3>RECIBIRÁS</h3>
           <h3>{get}</h3>
         </div>
-        <div>
+        <div className="flex sm:flex-col md:items-center">
           <h3>ENVIARÁS</h3>
           <h3>{send}</h3>
         </div>
       </div>
-      <div className="mt-9 md:w-[531px] sm:px-4 md:px-0 sm:text-xs">
-        {children}
-      </div>
+      <div className="w-full">{children}</div>
       {page === "Escrow Confirmado" ? (
         <div className="flex justify-center">
           <Link
@@ -53,24 +38,16 @@ export default function Peticiion({
           </Link>
         </div>
       ) : (
-        <div className="md:w-[531px] sm:w-full sm:px-4 md:px-0">
+        <>
           <div className="divider" />
-          <div className="flex justify-between mb-4">
-            <Link
-              href={back}
-              className="uppercase bg-dark-blue md:px-8 py-1 sm:px-2 rounded-[20px]"
-            >
-              Atras
-            </Link>
-            <Link
-              href={next}
-              className="uppercase bg-green md:px-8 py-1 sm:px-2 rounded-[20px]"
-            >
-              {page === "Escrow Aceptado" ? "CONFIRMAR" : "ACEPTAR ESCROW"}
-            </Link>
-          </div>
-        </div>
+          <Botones
+            texto1={"atras"}
+            texto2={page === "Escrow Aceptado" ? "CONFIRMAR" : "ACEPTAR ESCROW"}
+            link1={back}
+            link2={next}
+          />
+        </>
       )}
-    </div>
+    </>
   );
 }
