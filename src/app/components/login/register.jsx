@@ -33,7 +33,7 @@ export default function Register() {
             />
           );
         })}
-        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full gap-1 p-3 ">
+        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full justify-between p-3 ">
           <input
             className="bg-transparent border-none w-[80%] focus:outline-none"
             type={password ? "text" : "password"}
@@ -41,12 +41,11 @@ export default function Register() {
           />
           <button
             onClick={togglePassword}
-            className="absolute my-4 md:ml-56 sm:ml-52"
           >
             <Image src={view} alt="view" />
           </button>
         </div>
-        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full gap-1 p-3 ">
+        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full justify-between p-3 ">
           <input
             className="bg-transparent border-none w-[80%] focus:outline-none"
             type={password ? "text" : "password"}
@@ -54,7 +53,6 @@ export default function Register() {
           />
           <button
             onClick={togglePassword}
-            className="absolute my-4 md:ml-56 sm:ml-52"
           >
             <Image src={view} alt="view" />
           </button>
