@@ -26,7 +26,7 @@ export default function Form() {
           <div className="flex w-full bg-white rounded-xl p-3 gap-1 items-center  text-dark-gray">
             <Image src={mail} alt="mail" />
             <input
-              className="bg-white border-none bg-transparent focus:outline-none"
+              className=" border-none bg-transparent focus:outline-none"
               type="email"
               placeholder="Email"
             />
@@ -34,7 +34,7 @@ export default function Form() {
           <div className="flex bg-white rounded-xl p-3 gap-1  text-dark-gray">
             <Image src={lock} alt="lock" />
             <input
-              className="bg-white border-none bg-transparent w-[80%] focus:outline-none"
+              className="border-none bg-transparent w-[80%] focus:outline-none"
               type={password ? "text" : "password"}
               placeholder="Password"
             />
