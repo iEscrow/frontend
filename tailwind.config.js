@@ -30,7 +30,8 @@ module.exports = {
       'blue': '#063E67',
       'white': '#F4F4F4',
       'gray': '#BFBFBF',
-      'dark-gray': '#707070'
+      'dark-gray': '#707070',
+      'yellow': '#F3AA64'
     }
   }
 }

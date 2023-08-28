@@ -1,11 +1,9 @@
 import VenderCripto from "@/app/components/marketplace/vender-cripto";
 
-const Vender = () => {
+export default function ComprarCripto() {
   return (
     <>
       <VenderCripto />
     </>
   );
-};
-
-export default Vender;
+}

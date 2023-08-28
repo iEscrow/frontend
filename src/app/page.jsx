@@ -1,18 +1,19 @@
 import Image from "next/image";
+import waves from "../assets/wave.svg";
 import Header from "./components/Home/Header";
-import waves from "../assets/wave.svg"
 export default function Home() {
   return (
     <>
-    <main className='w-full'>
-      <div className="
-      min-h-[90vh] md:min-h-[70vh]
-      p-10 md:pl-24 md:pt-20
-      flex justify-center relative">
-        <Header />
-      </div>
-      <Image src={waves} className="absolute w-full bottom-0 z-10" alt="waves"/>
-    </main>
+      <main className="w-full">
+        <div className="min-h-[90vh] p-10 md:pl-24 pt-20 flex justify-center relative z-20">
+          <Header />
+        </div>
+        <Image
+          src={waves}
+          className="absolute w-full bottom-0 z-10"
+          alt="waves"
+        />
+      </main>
     </>
   );
 }
