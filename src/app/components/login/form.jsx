@@ -16,13 +16,13 @@ export default function Form() {
     setPassword(!password);
   };
   return (
-    <form className="max-md:px-4">
+    <form className="max-md:w-[90%]">
       <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
-      <div className=" shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] bg-light-blue/50 rounded-b-xl flex flex-col items-center px-[60px]">
+      <div className=" shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] bg-light-blue/50 rounded-b-xl flex flex-col items-center md:px-[60px] sm:px-8">
         <h2 className="my-6 md:text-2xl sm:text-lg font-semibold">Log In</h2>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col w-full gap-2">
           <div className="flex w-full bg-white rounded-xl p-3 gap-1 items-center  text-dark-gray">
             <Image src={mail} alt="mail" />
             <input
