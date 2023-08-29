@@ -12,7 +12,7 @@ export default function WithApps({mode}) {
         <span>Or {mode} with</span>
         <hr className="border border-light-blue w-[82px] ml-2" />
       </div>
-      <div className="flex justify-center gap-5 mb-4">
+      <div className="flex justify-center gap-5 ">
         <Link href="/">
           <Image src={google} alt="google" />
         </Link>
