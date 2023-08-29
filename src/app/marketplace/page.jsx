@@ -1,6 +1,3 @@
-import Image from "next/image";
-import logo from "@/assets/logo.svg";
-import logoDark from "@/assets/logo-dark.svg";
 import Orden from "../components/marketplace/orden";
 export default function Marketplace() {
   const data = [
@@ -41,19 +38,8 @@ export default function Marketplace() {
     },
   ];
   return (
-    <div className="flex flex-col gap-12 justify-center items-center p-4">
-      <Image
-        src={logo}
-        className="w-[150px] md:w-[250px] hidden  dark:flex"
-        alt="logo"
-      />
-      <Image
-        src={logoDark}
-        className="w-[150px] md:w-[250px] dark:hidden "
-        alt="logo"
-      />
-
-      <div className="flex gap-4 md:w-2/4">
+    <div className="w-full">
+      <div className="md:flex gap-4 hidden  ">
         <select className="select w-full">
           <option disabled selected>
             QUIERO
@@ -79,8 +65,8 @@ export default function Marketplace() {
           <option>VENEZUELA</option>
         </select>
       </div>
-      <div className="flex flex-col md:w-[35%] gap-3 ">
-        <div className="flex justify-end">
+      <div className="flex flex-col gap-3 ">
+        <div className="md:flex justify-end hidden">
           <select className="select select-ghost w-fit max-w-xs">
             <option disabled selected>
               ORDERNAR POR
