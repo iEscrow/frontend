@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background: url(../assets/black.png);
+    background: url(../assets/black.webp);
     background-repeat: no-repeat;
     background-size: cover;
     --body-color: #ffffff;

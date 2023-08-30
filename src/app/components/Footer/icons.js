@@ -7,27 +7,27 @@ import youtube from "@/assets/footer/Youtube.svg";
 
 export const icons = [
     {
-      path: "/",
+      path: "https://www.facebook.com/",
       img: facebook,
     },
     {
-      path: "/",
+      path: "https://twitter.com/",
       img: twitter,
     },
     {
-      path: "/",
+      path: "https://instagram.com/",
       img: instagram,
     },
     {
-      path: "/",
+      path: "https://telegram.com/",
       img: telegram,
     },
     {
-      path: "/",
+      path: "https://tiktok.com/",
       img: tiktok,
     },
     {
-      path: "/",
+      path: "https://youtube.com/",
       img: youtube,
     },
   ];
