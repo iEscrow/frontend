@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import Nav from "./components/Nav/Nav";
 import "./globals.css";
+import Footer from "./components/Footer/footer";
+import FooterMobile from "./components/Footer/footerMobile";
 
 const poppins = Poppins({ style: ["normal"], subsets: ["latin-ext"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
 
@@ -15,6 +17,8 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} dark:text-white text-dark-blue`}>
         <Nav />
         {children}
+        <Footer />
+        <FooterMobile />
       </body>
     </html>
   );
