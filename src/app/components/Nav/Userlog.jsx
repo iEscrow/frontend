@@ -3,6 +3,7 @@
 import { useState } from "react";
 import campana from "../../../assets/campana.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Userlog = () => {
   const [userlog, setUserLog] = useState(false);
@@ -11,16 +12,16 @@ const Userlog = () => {
       {userlog ? (
         <ul className="menu menu-horizontal flex justify-center items-center gap-x-2 p-2">
           <li>
-            <a>MARKETPLACE</a>
+            <Link href={"/marketplace"}>MARKETPLACE</Link>
           </li>
           <li>
-            <a>ESCROWS</a>
+            <Link href={"/"}>ESCROWS</Link>
           </li>
           <li>
-            <a>ABOUT</a>
+            <Link href={"/"}>ABOUT</Link>
           </li>
           <li>
-            <a>FAQ</a>
+            <Link href={"/"}>FAQ</Link>
           </li>
           <li>
             <button className="btn btn-sm btn-outline btn-accent rounded-full">

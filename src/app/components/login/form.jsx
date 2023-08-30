@@ -17,13 +17,13 @@ export default function Form() {
   };
   return (
     <form className="max-md:w-[90%]">
-      <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
+      <div className="bg-black w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
-      <div className=" shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] bg-light-blue/50 rounded-b-xl flex flex-col items-center md:px-[60px] sm:px-8">
+      <div className=" shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] bg-black/50 rounded-b-xl flex flex-col items-center md:px-[60px] sm:px-8">
         <h2 className="my-6 md:text-2xl sm:text-lg font-semibold">Log In</h2>
         <div className="flex flex-col w-full gap-2">
-          <div className="flex w-full bg-white rounded-xl p-3 gap-1 items-center  text-dark-gray">
+          <div className="flex w-full bg-input-gay rounded-xl p-3 gap-1 items-center">
             <Image src={mail} alt="mail" />
             <input
               className=" border-none bg-transparent focus:outline-none"
@@ -31,7 +31,7 @@ export default function Form() {
               placeholder="Email"
             />
           </div>
-          <div className="flex bg-white rounded-xl p-3 gap-1  text-dark-gray">
+          <div className="flex bg-input-gay rounded-xl p-3 gap-1">
             <Image src={lock} alt="lock" />
             <input
               className="border-none bg-transparent w-[80%] focus:outline-none"
