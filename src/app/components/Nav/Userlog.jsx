@@ -42,13 +42,13 @@ const Userlog = () => {
       ) : (
         <ul className="menu menu-horizontal flex justify-center items-center gap-x-4 p-2">
           <li>
-            <a>MARKETPLACE</a>
+            <Link href={"/"}>ABOUT</Link>
           </li>
           <li>
-            <a>ABOUT</a>
+            <Link href={"/"}>FAQ</Link>
           </li>
           <li>
-            <a>FAQ</a>
+            <Link href={"/marketplace"}>MARKETPLACE</Link>
           </li>
           <li onClick={() => setUserLog(!userlog)}>
             <a>LOGIN</a>
