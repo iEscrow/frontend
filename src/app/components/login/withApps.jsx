@@ -7,12 +7,12 @@ import apple from "../../../assets/login/apple.svg";
 export default function WithApps({mode}) {
   return (
     <div>
-      <div className="flex items-center text-[12px] mb-3">
+      <div className="flex items-center md:text-xs sm:text-[8px] mb-3">
         <hr className="border border-light-blue w-[82px] mr-2" />
         <span>Or {mode} with</span>
         <hr className="border border-light-blue w-[82px] ml-2" />
       </div>
-      <div className="flex justify-center gap-5 mb-4">
+      <div className="flex justify-center gap-5 ">
         <Link href="/">
           <Image src={google} alt="google" />
         </Link>

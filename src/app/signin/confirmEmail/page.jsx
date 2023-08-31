@@ -4,12 +4,12 @@ import Link from "next/link";
 import logo from "../../../assets/logo.svg";
 export default function ConfirmEmail() {
   return (
-    <div className="w-full min-h-screen flex  flex-col justify-center items-center">
-      <div className="w-[20%]">
+    <div className="w-full md:min-h-[90vh] sm:min-h-[92.4vh] flex sm:px-4 flex-col justify-center items-center">
+      <div className="md:w-[20%]">
       <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
-      <div className="bg-[#37d1f44f] text-white rounded-b-xl flex flex-col items-center px-[60px]">
+      <div className="bg-[#37d1f44f] text-white rounded-b-xl flex flex-col items-center md:px-[60px] sm:px-7">
         <h2 className="my-6 md:text-[24px] font-semibold">Almoust Done!</h2>
         <p className="text-center mb-3 text-[14px]">
           To complete the process, we need to confirm your Email adress. Please
