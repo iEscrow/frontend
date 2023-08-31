@@ -28,10 +28,13 @@ module.exports = {
       "light-blue": '#37D2F4',
       "dark-blue": "#02284A",
       'blue': '#063E67',
+      'blue-2': '#1B80A4',
       'white': '#F4F4F4',
       'gray': '#BFBFBF',
       'dark-gray': '#707070',
-      'yellow': '#F3AA64'
+      'input-gay': '#2D2D2D',
+      'yellow': '#F3AA64',
+      'black': '#121212'
     }
   }
 }

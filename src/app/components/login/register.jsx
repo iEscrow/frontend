@@ -17,23 +17,23 @@ export default function Register() {
     setPassword(!password);
   };
   return (
-    <form>
-      <div className="bg-blue w-full flex justify-center py-5 rounded-t-xl">
+    <form className="max-md:w-[90%]">
+      <div className="bg-black w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
-      <div className="bg-[#37d1f44f] text-white rounded-b-xl flex flex-col gap-4 p-4  items-center md:px-[60px]">
+      <div className="bg-black/50 text-white rounded-b-xl flex flex-col gap-4 p-4  items-center md:px-[60px]">
         <h2 className="md:text-2xl sm:text-lg font-semibold">Create account</h2>
         {ph.map((p) => {
           return (
             <input
               key={p.placeholder}
-              className="bg-white border-none rounded-full sm:text-sm text-dark-gray py-3 w-full pl-4 focus:outline-none"
+              className="bg-input-gay border-none rounded-full sm:text-sm py-3 w-full pl-4 focus:outline-none"
               type={p.type}
               placeholder={p.placeholder}
             />
           );
         })}
-        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full justify-between p-3 ">
+        <div className="flex w-full items-center sm:text-sm bg-input-gay rounded-full justify-between p-3 ">
           <input
             className="bg-transparent border-none w-[80%] focus:outline-none"
             type={password ? "text" : "password"}
@@ -45,7 +45,7 @@ export default function Register() {
             <Image src={view} alt="view" />
           </button>
         </div>
-        <div className="flex w-full items-center sm:text-sm text-dark-gray bg-white rounded-full justify-between p-3 ">
+        <div className="flex w-full items-center sm:text-sm bg-input-gay rounded-full justify-between p-3 ">
           <input
             className="bg-transparent border-none w-[80%] focus:outline-none"
             type={password ? "text" : "password"}
