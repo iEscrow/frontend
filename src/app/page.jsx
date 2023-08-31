@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <>
       <main className="w-full">
-        <div className="min-h-[90vh] p-10 md:pl-24 pt-20 flex justify-center relative z-20">
+        <div className="min-h-[95vh] p-10 md:pl-24 pt-20 flex justify-center relative z-20">
           <Header />
         </div>
         <Image
           src={waves}
-          className="absolute w-full bottom-0 z-10"
+          className="absolute w-full -bottom-10"
           alt="waves"
         />
       </main>
