@@ -1,5 +1,7 @@
+import { getUsers } from "@/hooks/Users";
 import Orden from "../components/marketplace/orden";
-export default function Marketplace() {
+export default async function Marketplace() {
+  const {users} = await getUsers()
   const data = [
     {
       id: 1,
@@ -37,6 +39,11 @@ export default function Marketplace() {
       method: "Tansferencia bancaria",
     },
   ];
+  data.forEach((item, index) => {
+    if (index < users.length) {
+      item.name = `${users[index].Name} ${users[index].Last_Name}`;
+    }
+  });
   return (
     <div className="w-full">
       <div className="md:flex gap-4 hidden  ">
