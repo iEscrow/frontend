@@ -33,6 +33,7 @@ module.exports = {
       'gray': '#BFBFBF',
       'dark-gray': '#707070',
       'input-gay': '#2D2D2D',
+      'button-gray':'#414141',
       'yellow': '#F3AA64',
       'black': '#121212'
     }

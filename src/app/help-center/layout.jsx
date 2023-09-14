@@ -19,8 +19,8 @@ export default function layout({children}) {
       <h1 className="text-4xl ">Centro de ayuda</h1>
       <p className="text-lg text-center">¿Cómo podemos ayudarte?</p>
       <div className="flex justify-center ">
-      <div className="flex justify-between bg-white w-96 rounded p-2 ">
-        <input type="text" placeholder="BUSCAR" className="bg-transparent text-black focus:outline-none" />
+      <div className="flex justify-between bg-input-gay w-96 rounded p-2 ">
+        <input type="text" placeholder="BUSCAR" className="bg-transparent placeholder:text-gray text-black focus:outline-none" />
         <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
