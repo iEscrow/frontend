@@ -7,7 +7,6 @@ export default function AccountFuntions() {
   const FAQ = FAQS;
   const [msj, setMsj] = useState();
   const [btn, setBtn] = useState();
-  console.log(msj);
   const handleChange = (e) => {
     setMsj(e.target.value);
     setBtn()

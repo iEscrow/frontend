@@ -20,7 +20,7 @@ export default function layout({children}) {
       <p className="text-lg text-center">¿Cómo podemos ayudarte?</p>
       <div className="flex justify-center ">
       <div className="flex justify-between bg-input-gay w-96 rounded p-2 ">
-        <input type="text" placeholder="BUSCAR" className="bg-transparent placeholder:text-gray text-black focus:outline-none" />
+        <input type="text" placeholder="BUSCAR" className="bg-transparent placeholder:text-gray  focus:outline-none" />
         <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"

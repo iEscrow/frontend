@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import profile from "@/assets/profile.svg"
-export default function Orden({ name, send, method, price }) {
+export default function Orden({ name, send, method, price = 300 }) {
   return (
     <div className="bg-input-gay rounded-2xl flex md:p-4 sm:p-3 justify-between md:h-[145px]">
       <div className=" flex flex-col md:justify-between md:w-[60%]">
