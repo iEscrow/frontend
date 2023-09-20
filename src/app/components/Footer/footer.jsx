@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col gap-3">
         <span className="footer-title text-blue-2 text-sm">Soporte</span>
-        <Link href={"/"} className="link link-hover">
+        <Link href="/help-center" className="link link-hover">
           Centro de ayuda
         </Link>
         <Link href={"/"} className="link link-hover">

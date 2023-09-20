@@ -21,7 +21,7 @@ const Userlog = () => {
             <Link href={"/"}>ABOUT</Link>
           </li>
           <li>
-            <Link href={"/"}>FAQ</Link>
+            <Link href={"/help-center"}>FAQ</Link>
           </li>
           <li>
             <button className="btn btn-sm btn-outline btn-accent rounded-full">
@@ -45,7 +45,7 @@ const Userlog = () => {
             <Link href={"/"}>ABOUT</Link>
           </li>
           <li>
-            <Link href={"/"}>FAQ</Link>
+            <Link href={"/help-center"}>FAQ</Link>
           </li>
           <li>
             <Link href={"/marketplace"}>MARKETPLACE</Link>
