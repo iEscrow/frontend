@@ -1,19 +1,28 @@
-import Link from "next/link";
+"use client"
+import { useOffer } from "@/context/OffersContext";
 import Botones from "./botones";
 const VenderCripto = () => {
+  const {setOffer, offer} = useOffer()
+  console.log(offer);
+  const handleOption = (e) => {
+    const {name, value} = e.target
+    setOffer({...offer, [name]: value })
+  }
   return (
     <>
       <div className="flex flex-col gap-6 text-white">
         <div>
           <p>Enviar</p>
-          <select className="select w-60 bg-white text-blue">
-            <option>BTC</option>
+          <select name="Send" value={offer?.Send} onChange={handleOption}  className="select w-60 bg-white text-blue">
+            <option value="BTC">BTC</option>
+            <option value="ETH">ETH</option>
           </select>
         </div>
         <div>
           <p>Recibir</p>
-          <select className="select w-60 bg-white text-blue">
-            <option>USDT</option>
+          <select name="Receive" value={offer?.Receive} onChange={handleOption} className="select w-60 bg-white text-blue">
+            <option value="USDT">USDT</option>
+            <option value="Transfer">Transferencia</option>
           </select>
         </div>
       </div>

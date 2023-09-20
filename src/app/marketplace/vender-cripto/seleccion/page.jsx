@@ -39,7 +39,7 @@ const Seleccion = () => {
         texto1={"atras"}
         texto2={"siguiente"}
         link1={"/marketplace/vender-cripto/"}
-        link2={"/marketplace/vender-cripto/publicar"}
+        link2={"/marketplace/vender-cripto/priceBTC"}
       />
     </>
   );
