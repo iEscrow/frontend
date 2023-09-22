@@ -31,7 +31,7 @@ const Cuenta = () => {
             />
             <span className="label-text text-white">BBVA</span>
           </div>
-          <Opciones />
+          <Opciones accion="cuenta" />
         </div>
         <div
           className={`${
@@ -66,8 +66,14 @@ const Cuenta = () => {
           <div className="flex-grow divider" />
         </div>
         <div className="flex w-full justify-center">
-          <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white text-xs md:text-sm rounded-full">
-            <Image src={plus} className="w-[20px]" alt="plus" /> AGREGAR CUENTA
+          <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white text-xs md:text-sm rounded-full p-0">
+            <label
+              className="flex w-full h-full justify-center items-center cursor-pointer "
+              htmlFor={"modal_agregar_cuenta"}
+            >
+              <Image src={plus} className="w-[20px]" alt="plus" />
+              <p>AGREGAR CUENTA</p>
+            </label>
           </button>
         </div>
       </div>
