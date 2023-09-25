@@ -25,13 +25,18 @@ const Wallet = () => {
               </p>
             </div>
           </div>
-          <Opciones />
+          <Opciones accion="wallet" />
         </div>
         <div className="divider" />
         <div className="flex w-full justify-center">
-          <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white text-xs md:text-sm rounded-full">
-            <Image src={plus} className="w-[20px] md:w-[20px]" alt="logo" />{" "}
-            AGREGAR WALLET
+          <button className="btn btn-ghost btn-sm w-48 bg-dark-blue text-white text-xs md:text-sm rounded-full p-0">
+            <label
+              className="flex w-full h-full items-center justify-center cursor-pointer"
+              htmlFor={"modal_agregar_wallet"}
+            >
+              <Image src={plus} className="w-[20px]" alt="plus" />
+              <p>AGREGAR WALLET</p>
+            </label>
           </button>
         </div>
       </div>
