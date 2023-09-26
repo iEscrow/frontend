@@ -27,7 +27,7 @@ export default function Referrals() {
   ]
   return (
     <div className="flex flex-col gap-10 min-h-[90vh]">
-      <div className="px-24">
+      <div className="md:px-24 max-md:flex justify-center">
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden dark:flex"
@@ -39,28 +39,28 @@ export default function Referrals() {
           alt="logo"
         />
       </div>
-      <h1 className="text-4xl font-medium px-24">Sistema de referidos</h1>
-      <div className="bg-input-gay px-24 py-4">
-        <div className="flex gap-10">
-          <div>
+      <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Sistema de referidos</h1>
+      <div className="bg-input-gay md:px-24 px-4 py-4">
+        <div className="flex md:gap-10">
+          <div className="max-md:text-sm">
             <p className="text-light-blue">Comisiones ganadas</p>
             <p>0.0075 BTC</p>
           </div>
-          <div>
+          <div className="max-md:text-sm">
             <p className="text-light-blue">Total amigos referidos</p>
             <p>4</p>
           </div>
-          <div>
+          <div className="max-md:text-sm">
             <p className="text-light-blue">Ranking</p>
             <p>3456</p>
           </div>
         </div>
       </div>
-      <div className="flex px-24 justify-between">
+      <div className="flex max-md:flex-col max-md:gap-5 md:px-24 px-4 md:justify-between">
         <div>
-          <h1 className="text-2xl">Amigos</h1>
+          <h1 className="text-2xl max-md:text-center">Amigos</h1>
           <div className="overflow-x-auto">
-            <table className="table">
+            <table className="md:table table-sm">
               {/* head */}
               <thead>
                 <tr>
@@ -107,9 +107,9 @@ export default function Referrals() {
           </div>
         </div>
         <div>
-        <h1 className="text-2xl">Historial de comisiones</h1>
+        <h1 className="text-2xl max-md:text-center">Historial de comisiones</h1>
           <div className="overflow-x-auto">
-            <table className="table">
+            <table className="md:table table-sm">
               {/* head */}
               <thead>
                 <tr>
