@@ -3,6 +3,7 @@ import logoDark from "@/assets/logo-dark.svg";
 import logo from "@/assets/logo.svg";
 import Wallet from "../components/marketplace/wallet";
 import Cuenta from "../components/marketplace/cuenta";
+import Link from "next/link";
 
 export default function Proflie() {
   return (
@@ -88,7 +89,10 @@ export default function Proflie() {
               emaildelusuario@gmail.com
             </p>
             <p>
-              <span className="text-light-blue">Reputación</span> 11
+              <span className="text-light-blue">Reputación </span> 
+              <Link className="underline" href="/profile/reputation">
+                11
+              </Link>
             </p>
           </div>
         </div>
