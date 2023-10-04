@@ -9,6 +9,7 @@ import EliminarCuenta from "./components/marketplace/AccionesCuenta/eliminar";
 import AgregarWallet from "./components/marketplace/AccionesWallet/agregar";
 import EditarWallet from "./components/marketplace/AccionesWallet/editar";
 import EliminarWallet from "./components/marketplace/AccionesWallet/eliminar";
+import Replicar from "./components/Replicar/Replicar";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         <EditarWallet />
         <EliminarWallet />
         <AgregarWallet />
+        <Replicar />
         <Footer />
         <FooterMobile />
         </OfferProvider>
