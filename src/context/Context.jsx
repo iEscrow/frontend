@@ -29,6 +29,7 @@ export default function Provider ({children}) {
         CBU: "",
         User_Id: "5",
       });
+    const [msj, setMsj] = useState();
     const router = useRouter()
     const getOffer = async () =>{
         try {
@@ -84,7 +85,7 @@ export default function Provider ({children}) {
         getOffer()
     },[])
     return (
-        <Context.Provider value={{sendOffer, setOffer, offer, sendAccount, getAccount, setAccount, account}}>
+        <Context.Provider value={{sendOffer, setOffer, offer, sendAccount, getAccount, setAccount, account, setMsj, msj}}>
             {children}
         </Context.Provider>
     )
