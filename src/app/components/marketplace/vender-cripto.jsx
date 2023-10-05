@@ -30,10 +30,12 @@ const VenderCripto = () => {
       <div className="flex gap-6">
         <div className="flex items-center gap-4">
           <input
+            onClick={handleOption}
             type="radio"
-            name="radio-10"
+            name="Access"
+            value="Private"
             className="radio checked:bg-green"
-            checked
+            
           />
           <div className="flex flex-col">
             <span className="label-text text-white">PRIVADO</span>
@@ -47,10 +49,12 @@ const VenderCripto = () => {
         </div>
         <div className="flex items-center gap-4">
           <input
+            onClick={handleOption}
             type="radio"
-            name="radio-10"
+            name="Access"
+            value="Public"
             className="radio checked:bg-green"
-            checked
+            
           />
           <div className="flex flex-col">
             <span className="label-text text-white">PÚBLICO</span>

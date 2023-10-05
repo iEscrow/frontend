@@ -1,5 +1,5 @@
 'use client'
-import { postOffer } from "@/hooks/Offers";
+import { getOffers, postOffer } from "@/hooks/Offers";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 
@@ -12,9 +12,9 @@ export const useOffer = () => {
 
 export default function OfferProvider ({children}) {
     const [offer, setOffer] = useState({
-        Offer_id: 6,
+        Offer_id: null,
         Type: 'Buy',
-        Access: 'Private',
+        Access: '',
         Owner: 'Josue-prueba',
         Offer_DateTime: 63220923,
         Claim_Id: 0,
@@ -22,6 +22,15 @@ export default function OfferProvider ({children}) {
         Receive: ''
     })
     const router = useRouter()
+    const getOffer = async () =>{
+        try {
+            const {Offers} = await getOffers()
+            if(Offers.length){
+                setOffer({...offer, Offer_id: Offers.length + 1 })
+            }
+        } catch (error) {
+            console.log(error)        }
+    }
     const sendOffer = async () => {
         try {
             const data = await postOffer(offer)
@@ -35,7 +44,9 @@ export default function OfferProvider ({children}) {
             console.log(error);
         }
     }
-
+    useEffect(()=> {
+        getOffer()
+    },[])
     return (
         <OffersContext.Provider value={{sendOffer, setOffer, offer}}>
             {children}
