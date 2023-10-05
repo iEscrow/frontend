@@ -1,10 +1,10 @@
 "use client"
-import { useOffer } from "@/context/OffersContext";
+import { useApp } from "@/context/Context";
 import Link from "next/link";
 import React from "react";
 
 export default function PriceBTC() {
-    const {sendOffer} = useOffer()
+    const {sendOffer} = useApp()
   return (
     <>
       <div className="mb-6">

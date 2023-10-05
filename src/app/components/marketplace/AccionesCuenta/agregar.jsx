@@ -1,12 +1,11 @@
 "use client"
 import React from "react";
-import { useAccount } from "@/context/BankContext";
+import { useApp } from "@/context/Context";
 
 
 const AgregarCuenta = () => {
-  const { sendAccount } = useAccount()
-  const { setAccount, account } = useAccount()
-  console.log(account);
+  const { sendAccount } = useApp()
+  const { setAccount, account } = useApp()
   const handleOption = (e) => {
     const {name, value} = e.target
     setAccount({...account, [name]: value })

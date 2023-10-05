@@ -1,9 +1,8 @@
 "use client"
-import { useOffer } from "@/context/OffersContext";
+import { useApp } from "@/context/Context";
 import Botones from "./botones";
 const VenderCripto = () => {
-  const {setOffer, offer} = useOffer()
-  console.log(offer);
+  const {setOffer, offer} = useApp()
   const handleOption = (e) => {
     const {name, value} = e.target
     setOffer({...offer, [name]: value })

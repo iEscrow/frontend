@@ -1,10 +1,6 @@
-import Botones from "@/app/components/marketplace/botones";
-import { getPriceCMC } from "@/hooks/criptoPrice/coinMarketCap";
 import Link from "next/link";
 
 const Publicar = async () => {
-  const {data} = await getPriceCMC()
-  console.log(data[0]);
   return (
     <div className="flex flex-col sm:gap-6 md:gap-10">
     <div className=" flex flex-col 4 gap-6">
