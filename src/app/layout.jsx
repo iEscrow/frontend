@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import Footer from "./components/Footer/footer";
 import FooterMobile from "./components/Footer/footerMobile";
+import Menu from "./components/Footer/menu";
 import OfferProvider from "@/context/OffersContext";
 import Nav from "./components/Nav/Nav";
 import AgregarCuenta from "./components/marketplace/AccionesCuenta/agregar";
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <AgregarWallet />
         <Replicar />
         <Footer />
+        <Menu />
         <FooterMobile />
         </OfferProvider>
       </body>
