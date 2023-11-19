@@ -45,7 +45,7 @@ const Userlog = () => {
               <a className="hover:bg-green">AYUDA</a>
             </li>
             <li>
-              <a className="hover:bg-green">REFERIDOS</a>
+              <a className="hover:bg-green" href="/referrals">REFERIDOS</a>
             </li>
             <li>
               <WalletAccion />
