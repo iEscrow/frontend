@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import Footer from "./components/Footer/footer";
 import FooterMobile from "./components/Footer/footerMobile";
+import Menu from "./components/Footer/menu";
 import Provider from "@/context/Context";
 import Nav from "./components/Nav/Nav";
 import AgregarCuenta from "./components/marketplace/AccionesCuenta/agregar";
@@ -28,18 +29,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className} dark:text-white text-dark-blue`}>
         <Provider>
-          
-            <Nav />
-            {children}
-            <EditarCuenta />
-            <EliminarCuenta />
-            <AgregarCuenta />
-            <EditarWallet />
-            <EliminarWallet />
-            <AgregarWallet />
-            <Replicar />
-        <Footer />
-            <FooterMobile />
+          <Nav />
+          {children}
+          <EditarCuenta />
+          <EliminarCuenta />
+          <AgregarCuenta />
+          <EditarWallet />
+          <EliminarWallet />
+          <AgregarWallet />
+          <Replicar />
+          <Footer />
+          <FooterMobile />
+          <Menu />
         </Provider>
       </body>
     </html>

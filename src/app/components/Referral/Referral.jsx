@@ -7,7 +7,7 @@ export default function Referral() {
   const referralId = 87654356789;
   const referralLink = "www.iescrow.com/....4366";
   return (
-    <div className="flex flex-col max-md:items-center max-md:pb-5 gap-10">
+    <div className=" relative flex flex-col max-md:items-center max-md:pb-5 gap-10">
       <div className="md:px-24 flex flex-col max-md:items-center gap-4">
         <p>ID de referido predeterminado</p>
         <div className="flex gap-5">
@@ -44,7 +44,7 @@ export default function Referral() {
         </div>
       </div>
       {copied && (
-        <div className="absolute md:flex justify-center">
+        <div className="max-md:absolute md:flex justify-center">
         <div className="alert alert-success w-fit">
         <svg
           xmlns="http://www.w3.org/2000/svg"

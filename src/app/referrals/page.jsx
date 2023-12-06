@@ -41,7 +41,7 @@ export default function Referrals() {
       </div>
       <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Sistema de referidos</h1>
       <div className="bg-input-gay md:px-24 px-4 py-4">
-        <div className="flex md:gap-10">
+        <div className="flex items-center gap-2 md:gap-10">
           <div className="max-md:text-sm">
             <p className="text-light-blue">Comisiones ganadas</p>
             <p>0.0075 BTC</p>

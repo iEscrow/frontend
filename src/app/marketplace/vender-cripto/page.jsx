@@ -1,4 +1,4 @@
-import VenderCripto from "@/app/components/marketplace/vender-cripto";
+import VenderCripto from "@/app/components/marketplace/selectWallet";
 
 const Vender = () => {
   return (

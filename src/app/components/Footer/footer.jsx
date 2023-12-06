@@ -22,7 +22,7 @@ export default function Footer() {
         <Link href={"/"} className="link link-hover">
           Descargar
         </Link>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/marketplace"} className="link link-hover">
           Marketplace
         </Link>
         <Link href={"/"} className="link link-hover">
