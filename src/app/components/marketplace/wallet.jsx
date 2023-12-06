@@ -1,12 +1,15 @@
+'use client'
 import Image from "next/image";
 import plus from "../../../assets/btn-plus.svg";
 import Opciones from "./opciones";
+import { usePathname } from "next/navigation";
 const Wallet = () => {
+  const url = usePathname()
   return (
     <div className="flex w-full justify-center">
       <div className="flex flex-col md:w-9/12">
         <div className="mb-3">
-          <p className="text-white sm:text-center md:text-start sm:text-sm md:text-md">
+          <p className={`text-white sm:text-center md:text-start sm:text-sm md:text-md ${url === '/profile' && 'hidden'}`}>
             Selecciona la wallet con la cual enviarás el (ticket):
           </p>
         </div>

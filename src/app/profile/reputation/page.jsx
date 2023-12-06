@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Reputation() {
   return (
-    <div className="flex flex-col gap-10 min-h-screen pb-10 md:px-20 px-5">
-      <div className="flex justify-center">
+    <div className="flex flex-col gap-10 pb-10 md:px-20  md:w-[50vw] px-5">
+      <div>
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden dark:flex"
@@ -18,8 +18,7 @@ export default function Reputation() {
           alt="logo"
         />
       </div>
-      <section className="flex justify-evenly max-md:flex-col max-md:gap-10 ">
-      <section className="flex flex-col gap-5 md:order-last">
+      <section className="flex flex-col gap-5">
           <h1 className="md:text-4xl text-2xl">
             Mi reputación{" "}
             <span className="text-light-blue font-semibold">11</span>
@@ -83,7 +82,7 @@ export default function Reputation() {
               <p className="text-xs">miembro activo desde: 15/12/2022</p>
             </div>
           </div>
-          <div className="pl-10">
+          <div className="md:pl-10">
             <p className="text-light-blue">Escrows completados:</p>
             <p className="pl-5"><Link className="underline" href="./reputation/completed">11</Link> (91.6% Positivos)</p>
             <p className="text-light-blue">Escrows completados sin reclamos:</p>
@@ -98,8 +97,8 @@ export default function Reputation() {
             <p className="pl-5"><Link className="underline" href="./reputation/canceled">1</Link> (8.4% Positivos)</p>
           </div>
         </section>
+        <div className="divider" />
         <section className="flex flex-col gap-5">
-          <h1 className="md:text-4xl text-2xl">Ultimos Escrows</h1>
           <div>
             <p>Escrow privado #102212 - 20/06/2023</p>
             <div className="pl-5">
@@ -155,8 +154,6 @@ export default function Reputation() {
           </div>
 
         </section>
-        
-      </section>
     </div>
   );
 }

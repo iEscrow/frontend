@@ -26,7 +26,7 @@ export default function Referrals() {
     },
   ]
   return (
-    <div className="flex flex-col gap-10 min-h-[90vh]">
+    <div className="flex flex-col gap-10 mb-10">
       <div className="md:px-24 max-md:flex justify-center">
         <Image
           src={logo}
@@ -56,7 +56,9 @@ export default function Referrals() {
           </div>
         </div>
       </div>
-      <div className="flex max-md:flex-col max-md:gap-5 md:px-24 px-4 md:justify-between">
+      <div className="flex flex-col gap-5 md:px-24 px-4 w-[50vw] ">
+      <Referral />
+        <div className="divider" />
         <div>
           <h1 className="text-2xl max-md:text-center">Amigos</h1>
           <div className="overflow-x-auto">
@@ -155,7 +157,7 @@ export default function Referrals() {
             </table>
           </div>
         </div>
-        <Referral />
+        
       </div>
     </div>
   );

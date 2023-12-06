@@ -4,8 +4,8 @@ import logo from "@/assets/logo.svg"
 
 export default function Completed() {
   return (
-    <div className="flex flex-col gap-10 min-h-screen items-center pb-10 md:px-20 px-5">
-      <div className="flex justify-center">
+    <div className="flex flex-col gap-10 min-h-screen  pb-10 md:px-20 px-5">
+      <div>
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden dark:flex"
@@ -17,7 +17,7 @@ export default function Completed() {
           alt="logo"
         />
       </div>
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-5 w-[40vw]">
           <h1 className="md:text-4xl text-2xl">
             Mi reputación{" "}
             <span className="text-light-blue font-semibold">11</span>

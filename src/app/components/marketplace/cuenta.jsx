@@ -6,9 +6,10 @@ import arrowUp from "../../../assets/arrow-up.svg";
 import plus from "../../../assets/btn-plus.svg";
 import Opciones from "./opciones";
 import axios from "axios";
+import { usePathname } from "next/navigation";
 const Cuenta = () => {
   const [data, setData] = useState(null);
-
+  const url = usePathname()
   useEffect(() => {
     async function fetchData() {
       try {
@@ -32,9 +33,9 @@ const Cuenta = () => {
     <div className="flex w-full justify-center">
       <div className="flex flex-col md:w-9/12">
         <div className="mb-3">
-          <p className="text-white sm:text-center md:text-start sm:text-sm md:text-md">
+          <p className={`text-white sm:text-center md:text-start sm:text-sm md:text-md ${url === '/profile' && 'hidden'}`}>
             Selecciona la cuenta con la cual realizarás la tranferencia
-            bancaria:
+            bancaria: 
           </p>
         </div>
         {data &&

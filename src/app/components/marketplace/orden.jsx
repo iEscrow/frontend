@@ -45,7 +45,7 @@ export default function Orden({ name, send, method, price = 300 }) {
         </div>
       </div>
       <div className="flex justify-center items-center">
-      <button className="bg-blue-2 w-8  flex flex-col justify-center items-center rounded-t-full rounded-b-full py-2 text-sm font-semibold space-y-[-4px] ">
+      <button className="bg-blue-2 w-8  flex flex-col justify-center items-center rounded-t-full rounded-b-full py-2 text-xs font-semibold space-y-[-4px] ">
         <p>C</p>
         <p>O</p>
         <p>M</p>

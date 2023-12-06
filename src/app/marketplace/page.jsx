@@ -68,7 +68,7 @@ export default async function Marketplace() {
           <option>VENEZUELA</option>
         </select>
       </div>
-      <div className="flex flex-col gap-3 ">
+      <div className="flex flex-col gap-5 ">
         <div className="md:flex justify-end hidden">
           <select className="select select-ghost w-fit max-w-xs">
             <option disabled selected>
@@ -80,16 +80,15 @@ export default async function Marketplace() {
             <option>PRECIO MAS BAJO</option>
           </select>
         </div>
-        {Offers?.map((d) => {
-          return (
+        {Offers?.map((d) => (
             <Orden
               key={d.Offer_id}
               name={d.name}
               send={d.send}
               method={d.method}
             />
-          );
-        })}
+          )
+        )}
       </div>
     </div>
   );
