@@ -39,7 +39,7 @@ export default function Referrals() {
           alt="logo"
         />
       </div>
-      <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Sistema de referidos</h1>
+      <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Mis referidos</h1>
       <div className="bg-input-gay md:px-24 px-4 py-4">
         <div className="flex items-center gap-2 md:gap-10">
           <div className="max-md:text-sm">
@@ -56,7 +56,7 @@ export default function Referrals() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:px-24 px-4 w-[50vw] ">
+      <div className="flex flex-col gap-5 md:px-24 px-4 md:w-[50vw] ">
       <Referral />
         <div className="divider" />
         <div>

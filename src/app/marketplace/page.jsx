@@ -68,7 +68,7 @@ export default async function Marketplace() {
           <option>VENEZUELA</option>
         </select>
       </div>
-      <div className="flex flex-col gap-5 ">
+      <div className="flex flex-col gap-3 ">
         <div className="md:flex justify-end hidden">
           <select className="select select-ghost w-fit max-w-xs">
             <option disabled selected>
