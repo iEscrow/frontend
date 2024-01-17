@@ -11,7 +11,7 @@ export default function Referral() {
       <div className="flex flex-col max-md:items-center gap-4">
         <p>ID de referido predeterminado</p>
         <div className="flex gap-5">
-          <p className="bg-input-gay px-4 py-2 rounded w-fit ">{referralId}</p>
+          <p className="dark:bg-input-gay bg-white px-4 py-2 rounded w-fit ">{referralId}</p>
           <button
             onClick={() => {
               navigator.clipboard.writeText(referralId);
@@ -19,16 +19,16 @@ export default function Referral() {
               setTimeout(()=> setCopied(false), 2000 )
               
             }}
-            className="bg-input-gay p-2 rounded"
+            className="dark:bg-input-gay bg-white p-2 rounded"
           >
-            <Image src={copy} alt="copy" width={25} />
+            <Image src={copy} alt="copy" className="invert dark:invert-0" width={25} />
           </button>
         </div>
       </div>
       <div className=" flex flex-col max-md:items-center gap-4">
         <p>Link de referido</p>
         <div className="flex gap-5">
-          <p className="bg-input-gay px-4 py-2 rounded w-fit ">
+          <p className="dark:bg-input-gay bg-white px-4 py-2 rounded w-fit ">
             {referralLink}
           </p>
           <button
@@ -37,9 +37,9 @@ export default function Referral() {
               setCopied(true);
               setTimeout(()=> setCopied(false), 2000 )
             }}
-            className="bg-input-gay p-2 rounded"
+            className="dark:bg-input-gay bg-white p-2 rounded"
           >
-            <Image src={copy} alt="copy" width={25} />
+            <Image src={copy} alt="copy" width={25} className="invert dark:invert-0" />
           </button>
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className=" hidden md:flex flex-col py-8 px-48 bg-gray dark:bg-black">
       <div className="flex justify-around text-xs">
       <div className="flex flex-col gap-3">
-        <span className="footer-title text-blue-2 text-sm">Sobre nosotros</span>
+        <span className="footer-title dark:text-blue-2 text-blue text-sm">Sobre nosotros</span>
         <Link href={"/"} className="link link-hover">
           Acerca
         </Link>
@@ -18,7 +18,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="flex flex-col gap-3">
-        <span className="footer-title text-blue-2 text-sm">Servicios</span>
+        <span className="footer-title dark:text-blue-2 text-blue text-sm">Servicios</span>
         <Link href={"/"} className="link link-hover">
           Descargar
         </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="flex flex-col gap-3">
-        <span className="footer-title text-blue-2 text-sm">Soporte</span>
+        <span className="footer-title dark:text-blue-2 text-blue text-sm">Soporte</span>
         <Link href="/help-center" className="link link-hover">
           Centro de ayuda
         </Link>
@@ -45,13 +45,13 @@ export default function Footer() {
         </Link>
       </div>
       <div className="flex flex-col gap-3">
-        <span className="footer-title text-blue-2 text-sm">Comunidad</span>
+        <span className="footer-title dark:text-blue-2 text-blue  text-sm">Comunidad</span>
         <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-[10px]">
         {icons.map((i) => {
           return (
             <div key={i.path} className="grid grid-flow-col gap-4">
               <Link href={i.path} className="flex items-center gap-2">
-                <div className="bg-blue-2 rounded-full p-1">
+                <div className="dark:bg-blue-2 bg-white rounded-full p-1">
                   <Image src={i.img} alt=" " />
                 </div>
                 /iescrow
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
       </div>
       <div className="divider "/>
-      <p className="text-center text-blue-2 text-[10px]">© 2023 iEscrow.crypto Derechos Reservados</p>
+      <p className="text-center dark:text-blue-2 text-blue text-[10px]">© 2023 iEscrow.crypto Derechos Reservados</p>
     </footer>
   );
 }

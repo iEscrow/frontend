@@ -14,7 +14,7 @@ const SelectWallet = ({
   };
   return (
     <>
-      <div className="flex flex-col gap-6 dark:text-white text-dark-blue">
+      <div className="flex flex-col items-center gap-6 dark:text-white text-dark-blue">
         <div>
           <p>Enviar</p>
           <select
@@ -41,7 +41,7 @@ const SelectWallet = ({
         </div>
       </div>
       <div className="divider"></div>
-      <div className="flex gap-6">
+      <div className="flex justify-center gap-6">
         <div className="flex items-center gap-4">
           <input
             onClick={handleOption}

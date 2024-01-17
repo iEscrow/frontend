@@ -40,7 +40,7 @@ export default function Referrals() {
         />
       </div>
       <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Mis referidos</h1>
-      <div className="bg-input-gay md:px-24 px-4 py-4">
+      <div className="dark:bg-input-gay md:px-24 px-4 py-4">
         <div className="flex items-center gap-2 md:gap-10">
           <div className="max-md:text-sm">
             <p className="text-light-blue">Comisiones ganadas</p>
@@ -79,7 +79,7 @@ export default function Referrals() {
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-4"
+                        className="w-4 invert dark:invert-0"
                       >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g
@@ -128,7 +128,7 @@ export default function Referrals() {
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-4"
+                        className="w-4 invert dark:invert-0"
                       >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g
