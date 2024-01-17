@@ -4,8 +4,8 @@ import logo from "@/assets/logo.svg"
 
 export default function Canceled() {
     return (
-        <div className="flex flex-col gap-10 min-h-screen items-center pb-10 md:px-20 px-5">
-          <div className="flex justify-center">
+        <div className="flex flex-col gap-10  pb-10 md:px-20 px-5">
+          <div>
             <Image
               src={logo}
               className="w-[150px] md:w-[250px] hidden dark:flex"
@@ -17,7 +17,7 @@ export default function Canceled() {
               alt="logo"
             />
           </div>
-          <section className="flex flex-col gap-5">
+          <section className="flex flex-col gap-5 md:w-[40vw]">
               <h1 className="md:text-4xl text-2xl">
                 Mi reputación{" "}
                 <span className="text-light-blue font-semibold">11</span>
@@ -81,7 +81,7 @@ export default function Canceled() {
                   <p className="text-xs">miembro activo desde: 15/12/2022</p>
                 </div>
               </div>
-                <p className="text-light-blue">Escrows cancelados: <span className="text-white">1 (8.4% Positivos)</span></p>
+                <p className="text-light-blue">Escrows cancelados: <span className="text-blue dark:text-white">1 (8.4% Positivos)</span></p>
                 <div className="divider" />
                 <div className="flex flex-col gap-2">
                 <p>Escrow privado #102212 - 20/06/2023</p>
@@ -100,7 +100,7 @@ export default function Canceled() {
                   <p className="pl-5">“El usuario tuvo un problema con su homebanking y no me transfiró”</p>
                 </div>
                 <div className="flex justify-end">
-                <button className="bg-dark-blue rounded-full font-semibold px-5 py-2 ">
+                <button className="bg-blue-2 text-white rounded-full font-semibold px-5 py-2 ">
             <label
               className="flex w-full h-full justify-center items-center cursor-pointer "
               htmlFor="modal_btn_replicar"

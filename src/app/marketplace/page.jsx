@@ -2,7 +2,44 @@
 import { getOffers } from "@/hooks/Offers";
 import Orden from "../components/marketplace/orden";
 export default async function Marketplace() {
-  const {Offers} = await getOffers()
+  // const {Offers} = await getOffers()
+  const Offers = [
+    {
+      id: 1,
+      name: "Facundo Salas",
+      send: "0,07 BTC",
+      price: "27.505,20 ARS",
+      method: "Tansferencia bancaria",
+    },
+    {
+      id: 2,
+      name: "Pedro Perez",
+      send: "0,07 BTC",
+      price: "27.505,20 ARS",
+      method: "Tansferencia bancaria",
+    },
+    {
+      id: 3,
+      name: "Juan Lopez",
+      send: "0,07 BTC",
+      price: "27.505,20 ARS",
+      method: "Tansferencia bancaria",
+    },
+    {
+      id: 4,
+      name: "Pablo Bravo",
+      send: "0,07 BTC",
+      price: "27.505,20 ARS",
+      method: "Tansferencia bancaria",
+    },
+    {
+      id: 5,
+      name: "Ana Perez",
+      send: "0,07 BTC",
+      price: "27.505,20 ARS",
+      method: "Tansferencia bancaria",
+    },
+  ];
   return (
     <div className="w-full">
       <div className="md:flex gap-4 hidden  ">
@@ -43,16 +80,15 @@ export default async function Marketplace() {
             <option>PRECIO MAS BAJO</option>
           </select>
         </div>
-        {Offers?.map((d) => {
-          return (
+        {Offers?.map((d) => (
             <Orden
               key={d.Offer_id}
-              name={d.Owner}
-              send={d.Send}
-              method={d.Receive}
+              name={d.name}
+              send={d.send}
+              method={d.method}
             />
-          );
-        })}
+          )
+        )}
       </div>
     </div>
   );

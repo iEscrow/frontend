@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Proflie() {
   return (
     <div className="flex flex-col gap-10 min-h-screen pb-10 md:px-20 px-5">
-      <div className="flex justify-center">
+      <div>
         <Image
           src={logo}
           className="w-[150px] md:w-[250px] hidden dark:flex"
@@ -20,9 +20,8 @@ export default function Proflie() {
           alt="logo"
         />
       </div>
-      <div className="md:flex gap-40">
-      <div className="md:w-2/5 flex flex-col md:gap-10 gap-5">
-      <h1 className="md:text-4xl text-2xl">Mi perfil</h1>
+      <div className="md:w-[50vw] flex flex-col  gap-5">
+      <h1 className="text-2xl">Mi perfil</h1>
       <div className="flex flex-col gap-5">
         <p className="text-lg">Datos personales</p>
         <div className="md:flex gap-5">
@@ -98,14 +97,11 @@ export default function Proflie() {
         </div>
       </div>
       <div className="divider" />
-      <h1 className="md:text-4xl text-2xl">Mis cuentas bancarias</h1>
+      <h1 className=" text-2xl">Mis cuentas bancarias</h1>
       <Cuenta />
-      <div className="divider md:hidden" />
-      </div>
-      <div className="md:w-2/5 flex flex-col md:gap-10 gap-5">
-      <h1 className="md:text-4xl text-2xl">Mis wallets</h1>
+      <div className="divider" />
+      <h1 className=" text-2xl">Mis wallets</h1>
       <Wallet />
-      </div>
       </div>
     </div>
   );

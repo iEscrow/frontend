@@ -3,7 +3,7 @@ import Link from "next/link";
 import {icons} from "./icons"
 export default function Footer() {
   return (
-    <footer className=" hidden md:flex flex-col py-8 px-48 bg-black">
+    <footer className=" hidden md:flex flex-col py-8 px-48 bg-gray dark:bg-black">
       <div className="flex justify-around text-xs">
       <div className="flex flex-col gap-3">
         <span className="footer-title text-blue-2 text-sm">Sobre nosotros</span>
@@ -22,7 +22,7 @@ export default function Footer() {
         <Link href={"/"} className="link link-hover">
           Descargar
         </Link>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/marketplace"} className="link link-hover">
           Marketplace
         </Link>
         <Link href={"/"} className="link link-hover">

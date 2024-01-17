@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { FAQS } from "./FAQ";
 import Link from "next/link";
+import { useApp } from "@/context/Context";
 
 export default function AccountFuntions() {
   const FAQ = FAQS;
-  const [msj, setMsj] = useState();
+  const {setMsj, msj} = useApp()
   const [btn, setBtn] = useState();
   const handleChange = (e) => {
     setMsj(e.target.value);

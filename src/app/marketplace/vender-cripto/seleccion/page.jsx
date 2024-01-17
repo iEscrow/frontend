@@ -12,24 +12,24 @@ const Seleccion = () => {
       <div className="flex w-full items-center gap-4  md:justify-evenly">
         <div className="flex flex-col sm:gap-4 md:gap-4">
           <div>
-            <p className="text-white sm:text-xs md:text-md">BTC a Enviar</p>
+            <p className="dark:text-white sm:text-xs md:text-md">BTC a Enviar</p>
           </div>
           <div>
-            <p className="text-white sm:text-xs md:text-md">Cotización Dolar</p>
+            <p className="dark:text-white sm:text-xs md:text-md">Cotización Dolar</p>
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex items-center">
             <input
               type="text"
-              className="input sm:w-[142px] md:w-[172px] sm:h-[26px] md:h-[36px] bg-white"
+              className="input sm:w-[142px] md:w-[172px] sm:h-[26px] md:h-[36px] dark:bg-input-gay"
             />
             <p className="sm:text-[10px] md:text-md">~nro dólares</p>
           </div>
           <div>
             <input
               type="text"
-              className="input sm:w-[142px] md:w-[172px] sm:h-[26px] md:h-[36px] bg-white"
+              className="input sm:w-[142px] md:w-[172px] sm:h-[26px] md:h-[36px] dark:bg-input-gay"
             />
           </div>
         </div>

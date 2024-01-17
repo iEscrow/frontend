@@ -1,9 +1,10 @@
-import VenderCripto from "@/app/components/marketplace/vender-cripto";
+import SelectWallet from "@/app/components/marketplace/selectWallet";
+
 
 export default function ComprarCripto() {
   return (
     <>
-      <VenderCripto />
+      <SelectWallet link2="/marketplace/comprar-cripto/seleccion" />
     </>
   );
 }

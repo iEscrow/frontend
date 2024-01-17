@@ -1,7 +1,16 @@
+"use client"
 import React from "react";
-import Botones from "../botones";
+import { useApp } from "@/context/Context";
+
 
 const AgregarCuenta = () => {
+  const { sendAccount } = useApp()
+  const { setAccount, account } = useApp()
+  const handleOption = (e) => {
+    const {name, value} = e.target
+    setAccount({...account, [name]: value })
+  }
+
   return (
     <>
       <input
@@ -18,8 +27,10 @@ const AgregarCuenta = () => {
                 type="text"
                 placeholder="TITULAR"
                 className="input w-full"
+                name="User_Id"
+                onChange={handleOption}
               />
-              <input type="text" placeholder="BANCO" className="input w-full" />
+              <input type="text" placeholder="BANCO" className="input w-full" name="Id" onChange={handleOption}/>
               <div className="flex gap-2">
                 <select className="select w-full">
                   <option disabled selected>
@@ -29,9 +40,9 @@ const AgregarCuenta = () => {
                   <option>BTC</option>
                   <option>ETH</option>
                 </select>
-                <input type="text" className="input w-full" />
+                <input type="text" className="input w-full" name="Account_Number" onChange={handleOption}/>
               </div>
-              <input type="text" placeholder="CBU" className="input w-full " />
+              <input type="text" placeholder="CBU" className="input w-full " name="CBU" onChange={handleOption}/>
               <select className="select w-full">
                 <option disabled selected>
                   DIVISA
@@ -59,9 +70,8 @@ const AgregarCuenta = () => {
                   cancelar
                 </label>
               </button>
-              <button className="btn btn-sm btn-accent rounded-full">
+              <button className="btn btn-sm btn-accent rounded-full" onClick={sendAccount}>
                 <label
-                  htmlFor="modal_agregar_cuenta"
                   className="cursor-pointer w-full"
                 >
                   confirmar

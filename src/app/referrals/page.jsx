@@ -26,7 +26,7 @@ export default function Referrals() {
     },
   ]
   return (
-    <div className="flex flex-col gap-10 min-h-[90vh]">
+    <div className="flex flex-col gap-10 mb-10">
       <div className="md:px-24 max-md:flex justify-center">
         <Image
           src={logo}
@@ -39,9 +39,9 @@ export default function Referrals() {
           alt="logo"
         />
       </div>
-      <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Sistema de referidos</h1>
+      <h1 className="md:text-4xl text-2xl  font-medium max-md:flex justify-center md:px-24">Mis referidos</h1>
       <div className="bg-input-gay md:px-24 px-4 py-4">
-        <div className="flex md:gap-10">
+        <div className="flex items-center gap-2 md:gap-10">
           <div className="max-md:text-sm">
             <p className="text-light-blue">Comisiones ganadas</p>
             <p>0.0075 BTC</p>
@@ -56,7 +56,9 @@ export default function Referrals() {
           </div>
         </div>
       </div>
-      <div className="flex max-md:flex-col max-md:gap-5 md:px-24 px-4 md:justify-between">
+      <div className="flex flex-col gap-5 md:px-24 px-4 md:w-[50vw] ">
+      <Referral />
+        <div className="divider" />
         <div>
           <h1 className="text-2xl max-md:text-center">Amigos</h1>
           <div className="overflow-x-auto">
@@ -155,7 +157,7 @@ export default function Referrals() {
             </table>
           </div>
         </div>
-        <Referral />
+        
       </div>
     </div>
   );
