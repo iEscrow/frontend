@@ -8,14 +8,14 @@ export default function Comision() {
         <p>% DE COMISIÓN</p>
         <div className="flex items-center gap-2">
           <input
-            type="text"
-            className="input w-[172px] h-[36px] bg-input-gay"
+            type="number"
+            className="input w-[172px] h-[36px] dark:bg-input-gay"
           />
           <div className="dropdown dropdown-hover dropdown-right cursor-pointer">
             <Image src={informacion} alt="informacion" />
             <p
               tabIndex={0}
-              className=" dropdown-content menu md:w-[178px] rounded-md p-4 bg-input-gay text-[10px]"
+              className=" dropdown-content menu md:w-[178px] rounded-md p-4 bg-white dark:bg-input-gay text-[10px]"
             >
               En caso de un porcentaje de descuento, puedes indicarlo
               anteponiendo “-” (resta) al porcentaje
@@ -27,14 +27,14 @@ export default function Comision() {
         <p>USDT TOTAL</p>
         <div className="flex items-center gap-2">
           <input
-            type="text"
-            className="input w-[172px] h-[36px] bg-[#2D2D2D]"
+            type="number"
+            className="input w-[172px] h-[36px] dark:bg-[#2D2D2D]"
           />
           <div className="dropdown dropdown-hover dropdown-right cursor-pointer">
             <Image src={informacion} alt="informacion" />
             <p
               tabIndex={0}
-              className=" dropdown-content menu md:w-[178px] rounded-md p-4 bg-input-gay text-[10px]"
+              className=" dropdown-content menu md:w-[178px] rounded-md p-4 bg-white dark:bg-input-gay text-[10px]"
             >
               Si la transacción es mayor o igual a US$ 5000 el fee se reducirá a
               0.5%

@@ -23,7 +23,7 @@ export default function Header() {
       {url !== '/help-center/form' ? <p className="text-lg text-center">¿Cómo podemos ayudarte?</p> : <p className="text-lg text-center">Enviarnos una consulta utilizando nuestro formulario de contacto.</p> }
       <div className="flex justify-center ">
         {url !== "/help-center/form" && (
-          <div className="flex justify-between bg-input-gay w-96 rounded p-2 ">
+          <div className="flex justify-between bg-white dark:bg-input-gay w-96 rounded p-2 ">
             <input
               type="text"
               placeholder="BUSCAR"

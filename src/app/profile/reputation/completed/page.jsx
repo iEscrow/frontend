@@ -17,7 +17,7 @@ export default function Completed() {
           alt="logo"
         />
       </div>
-      <section className="flex flex-col gap-5 w-[40vw]">
+      <section className="flex flex-col gap-5 md:w-[40vw]">
           <h1 className="md:text-4xl text-2xl">
             Mi reputación{" "}
             <span className="text-light-blue font-semibold">11</span>
@@ -81,7 +81,7 @@ export default function Completed() {
               <p className="text-xs">miembro activo desde: 15/12/2022</p>
             </div>
           </div>
-            <p className="text-light-blue">Escrows completados: <span className="text-white">11 (91.6% Positivos)</span></p>
+            <p className="text-light-blue">Escrows completados: <span className="text-blue dark:text-white">11 (91.6% Positivos)</span></p>
             <div>
             <p>Escrow privado #102212 - 20/06/2023</p>
             <div className="pl-5">

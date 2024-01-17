@@ -14,7 +14,7 @@ const SelectWallet = ({
   };
   return (
     <>
-      <div className="flex flex-col gap-6 text-white">
+      <div className="flex flex-col gap-6 dark:text-white text-dark-blue">
         <div>
           <p>Enviar</p>
           <select
@@ -51,7 +51,7 @@ const SelectWallet = ({
             className="radio checked:bg-green"
           />
           <div className="flex flex-col">
-            <span className="label-text text-white">PRIVADO</span>
+            <span className="label-text dark:text-white text-dark-blue font-semibold">PRIVADO</span>
             <p className="sm:hidden md:flex text-xs">
               Ya tengo la contraparte.
             </p>
@@ -69,7 +69,7 @@ const SelectWallet = ({
             className="radio checked:bg-green"
           />
           <div className="flex flex-col">
-            <span className="label-text text-white">PÚBLICO</span>
+            <span className="label-text dark:text-white text-dark-blue font-semibold">PÚBLICO</span>
             <p className="sm:hidden md:flex text-xs">
               No tengo la contraparte.
             </p>
