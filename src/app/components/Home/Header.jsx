@@ -33,7 +33,7 @@ export default function Header() {
       </div>
       <div className="flex sm:justify-center lg:justify-start w-full py-6">
         <Link href={"/marketplace/vender-cripto"}>
-          <button className=" sm:btn-sm md:btn-md bg-blue-2 rounded-full">
+          <button className="btn-md md:w-[200px] bg-green text-dark-blue font-bold rounded-full">
             COMENZAR
           </button>
         </Link>

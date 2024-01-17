@@ -1,7 +1,7 @@
 const page = () => {
   return (
-    <div className="w-full h-auto flex flex-col items-center sm:gap-4 md:gap-10">
-      <div className="w-full text-center">
+    <div className="w-full h-auto flex flex-col items-center sm:gap-4 md:gap-2">
+      <div className="w-full text-start">
         <p className="sm:text-[20px] md:text-[32px]">Historial de depósitos</p>
       </div>
       <div className="min-w-full flex flex-col gap-1">
