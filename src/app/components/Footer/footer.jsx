@@ -51,8 +51,8 @@ export default function Footer() {
           return (
             <div key={i.path} className="grid grid-flow-col gap-4">
               <Link href={i.path} className="flex items-center gap-2">
-                <div className="dark:bg-blue-2 bg-white rounded-full p-1">
-                  <Image src={i.img} alt=" " />
+                <div className="dark:bg-blue-2 text-blue-2 dark:text-dark-blue dark:fill-transparent bg-white rounded-full p-1">
+                  <i.img />
                 </div>
                 /iescrow
               </Link>
