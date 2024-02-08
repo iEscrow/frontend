@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="flex justify-around text-xs">
       <div className="flex flex-col gap-3">
         <span className="footer-title dark:text-blue-2 text-blue text-sm">Sobre nosotros</span>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/about"} className="link link-hover">
           Acerca
         </Link>
         <Link href={"/"} className="link link-hover">
           Términos
         </Link>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/about"} className="link link-hover">
           Privacidad
         </Link>
       </div>
@@ -28,7 +28,7 @@ export default function Footer() {
         <Link href={"/"} className="link link-hover">
           Escrow
         </Link>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/about"} className="link link-hover">
           Programa de referidos
         </Link>
         <Link href={"/"} className="link link-hover">
@@ -40,7 +40,7 @@ export default function Footer() {
         <Link href="/help-center" className="link link-hover">
           Centro de ayuda
         </Link>
-        <Link href={"/"} className="link link-hover">
+        <Link href={"/about"} className="link link-hover">
           Seguridad
         </Link>
       </div>
@@ -51,7 +51,7 @@ export default function Footer() {
           return (
             <div key={i.path} className="grid grid-flow-col gap-4">
               <Link href={i.path} className="flex items-center gap-2">
-                <div className="dark:bg-blue-2 text-blue-2 dark:text-dark-blue dark:fill-transparent bg-white rounded-full p-1">
+                <div className="dark:bg-blue-2 text-blue-2 dark:text-dark-blue bg-white rounded-full p-1 flex items-center justify-center">
                   <i.img />
                 </div>
                 /iescrow
