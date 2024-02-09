@@ -4,14 +4,10 @@ import FooterMobile from "./components/Footer/footerMobile";
 import Menu from "./components/Footer/menu";
 import Provider from "@/context/Context";
 import Nav from "./components/Nav/Nav";
-import AgregarCuenta from "./components/marketplace/AccionesCuenta/agregar";
-import EditarCuenta from "./components/marketplace/AccionesCuenta/editar";
-import EliminarCuenta from "./components/marketplace/AccionesCuenta/eliminar";
-import AgregarWallet from "./components/marketplace/AccionesWallet/agregar";
-import EditarWallet from "./components/marketplace/AccionesWallet/editar";
-import EliminarWallet from "./components/marketplace/AccionesWallet/eliminar";
 import Replicar from "./components/Replicar/Replicar";
 import "./globals.css";
+import { Disable } from "./components/account/disable";
+import Modales from "./components/Modales";
 
 const poppins = Poppins({
   style: ["normal"],
@@ -31,13 +27,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Nav />
           {children}
-          <EditarCuenta />
-          <EliminarCuenta />
-          <AgregarCuenta />
-          <EditarWallet />
-          <EliminarWallet />
-          <AgregarWallet />
-          <Replicar />
+          <Modales />
           <Footer />
           <FooterMobile />
           <Menu />
