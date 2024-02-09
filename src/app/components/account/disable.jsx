@@ -6,9 +6,11 @@ export const Disable = () => {
   const router = useRouter()
   return (
     <dialog id="disable_account" className="modal modal-bottom sm:modal-middle">
-      <div className="modal-box">
-        <div className="flex justify-center">
-          <Image alt="disable" src={require("@/assets/shield_person.svg")} />
+      <div className="modal-box px-10 border-2 border-blue-2">
+        <div className="flex justify-center mb-4">
+          <div className="border-2 border-blue-2 rounded-full p-2">
+            <Image alt="reactivate" src={require("@/assets/disableAccount.svg")} />
+          </div>
         </div>
         <h3 className="text-xs sm:text-sm md:text-base lg:text-lg uppercase font-semibold">
           ¿estás seguro de que deseas desactivar tu cuenta?
