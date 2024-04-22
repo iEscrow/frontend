@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background: url(../assets/white.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    --body-color: #000000;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: url(../assets/black.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    --body-color: #ffffff;
+  }
+}

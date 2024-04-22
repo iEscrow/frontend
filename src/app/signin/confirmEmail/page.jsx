@@ -1,0 +1,25 @@
+import Button from "@/app/components/login/button";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../../assets/logo.svg";
+export default function ConfirmEmail() {
+  return (
+    <div className="w-full md:min-h-[90vh] sm:min-h-[92.4vh] flex sm:px-4 flex-col justify-center items-center">
+      <div className="md:w-[20%]">
+      <div className="bg-gradient-to-r from-[#171717]  to-[#272727] w-full flex justify-center py-5 rounded-t-xl">
+        <Image width={144} height={62.4} src={logo} alt="logo" />
+      </div>
+      <div className="bg-input-gay text-white rounded-b-xl flex flex-col items-center md:px-[60px] sm:px-7">
+        <h2 className="my-6 md:text-[24px] font-semibold">Almoust Done!</h2>
+        <p className="text-center mb-3 text-[14px]">
+          To complete the process, we need to confirm your Email adress. Please
+          click the link in the email we just sent you
+        </p>
+        <h3 className="text-[14px]">Didn’t you get it?</h3>
+        <Button mode="send again" path="/" />
+        <Link href="/" className="my-6 text-[14px]">Confirm Later</Link>
+      </div>
+      </div>
+    </div>
+  );
+}
