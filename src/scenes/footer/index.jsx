@@ -8,14 +8,12 @@ import { tokens } from "../../theme";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const FAQ = () => {
-  const [mainTitles, setMainTitle] = useState([]);
-  const [FAQs, setFAQs] = useState([]);
+const Footer = () => {
+  const [footerData, setFooterData] = useState([]);
 
   const handleUploadIconMain = async (e, id) => {
     const formData = new FormData();
     formData.append("file", e.target.files[0]);
-    console.log(formData);
     try {
       const response = await axios.post(
         `http://localhost:3000/api/help-center/upload/main/${id}`,
@@ -29,29 +27,16 @@ const FAQ = () => {
   };
 
   const handleSubmitMain = async ({ id, title }) => {
-    await axios.put(`http://localhost:3000/api/help-center/main/${id}`, {
+    await axios.put(`http://localhost:3000/api/footer/${id}`, {
       title,
     });
 
     getData();
   };
   const handleSubmitSubitem = async ({ id, title, content }) => {
-    await axios.put(`http://localhost:3000/api/help-center/sub/${id}`, {
+    await axios.put(`http://localhost:3000/api/footer/item/${id}`, {
       title,
       info: content,
-    });
-    getData();
-  };
-  const handleSubmitFAQSet = async ({ id, title }) => {
-    await axios.put(`http://localhost:3000/api/help-center/faq-main/${id}`, {
-      title,
-    });
-    getData();
-  };
-  const handleSubmitFAQItem = async ({ id, title, content }) => {
-    await axios.put(`http://localhost:3000/api/help-center/faq-sub/${id}`, {
-      question: title,
-      answer: content,
     });
     getData();
   };
@@ -59,49 +44,41 @@ const FAQ = () => {
   useEffect(() => {
     getData();
     return () => {
-      setMainTitle([]);
-      setFAQs([]);
+      setFooterData([]);
     };
   }, []);
 
   const getData = () => {
     axios
-      .get("http://localhost:3000/api/help-center/titles")
-      .then((response) => setMainTitle(response.data));
-    axios
-      .get("http://localhost:3000/api/help-center/faqs")
-      .then((response) => setFAQs(response.data));
+      .get("http://localhost:3000/api/footer/")
+      .then((response) => setFooterData(response.data));
   };
 
 
   return (
     <Box m="20px">
-      <Header title="Centro de Ayuda" />
-      {mainTitles?.length
-        ? mainTitles.map((item, idx) => (
-            <MainItem
-              item={item}
-              key={idx}
-              subitems={item.HelpCenterSubItems}
-              handleSubmit={handleSubmitMain}
-              handleSubitemSubmit={handleSubmitSubitem}
-              handleUploadIcon={handleUploadIconMain}
-            />
-          ))
-        : null}
-
-      <Header title="Preguntas Frecuentes" />
-      {FAQs?.length
-        ? FAQs.map((item, idx) => (
-            <MainItem
-              item={item}
-              key={idx}
-              subitems={item.FAQItems}
-              handleSubmit={handleSubmitFAQSet}
-              handleSubitemSubmit={handleSubmitFAQItem}
-            />
-          ))
-        : null}
+      <Header title="Footer" />
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 16,
+        }}
+      >
+        {footerData?.length
+          ? footerData.map((item, idx) => (
+              <MainItem
+                item={item}
+                key={idx}
+                icon={false}
+                subitems={item.FooterItems}
+                handleSubmit={handleSubmitMain}
+                handleSubitemSubmit={handleSubmitSubitem}
+                handleUploadIcon={handleUploadIconMain}
+              />
+            ))
+          : null}
+      </div>
     </Box>
   );
 };
@@ -112,31 +89,36 @@ const MainItem = ({
   handleSubmit,
   handleSubitemSubmit,
   handleUploadIcon,
+  icon,
 }) => {
   const [editing, setEditing] = useState(false);
   const [title, setTitle] = useState(item.title);
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Accordion expanded>
+    <Accordion expanded style={{ marginBlock: 0, minWidth: 300 }}>
       <AccordionSummary style={{ alignItems: "center" }}>
-        <img
-          alt="icon"
-          src={item.iconURL}
-          style={{
-            width: 30,
-            height: 30,
-            objectFit: "contain",
-            marginRight: 16,
-          }}
-          onClick={() => document.getElementById("fileInput").click()}
-        />
-        <input
-          type="file"
-          id="fileInput"
-          style={{ display: "none" }}
-          onChange={(e) => handleUploadIcon(e, item.id)}
-        />
+        {icon ? (
+          <>
+            <img
+              alt="icon"
+              src={item.iconURL}
+              style={{
+                width: 30,
+                height: 30,
+                objectFit: "contain",
+                marginRight: 16,
+              }}
+              onClick={() => document.getElementById("fileInput").click()}
+            />
+            <input
+              type="file"
+              id="fileInput"
+              style={{ display: "none" }}
+              onChange={(e) => handleUploadIcon(e, item.id)}
+            />
+          </>
+        ) : null}
         {editing ? (
           <div
             style={{ display: "flex", flexDirection: "row", flex: 1, gap: 16 }}
@@ -279,4 +261,4 @@ const SubItem = ({ item, handleSubmit }) => {
     </AccordionDetails>
   );
 };
-export default FAQ;
+export default Footer;

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
@@ -15,20 +15,38 @@ import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
+import Footer from "./scenes/footer";
+import { useDispatch, useSelector } from "react-redux";
+import { validateToken } from "./actions/authActions";
+import Login from "./scenes/login";
 
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
+  const user = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); // Importa useNavigate de react-router-dom
+
+  useEffect(() => {
+    dispatch(validateToken());
+  }, []);
+
+  useEffect(() => {
+    if (!user.isAuthenticated && !user.isLoading) {
+      navigate("/login");
+    }
+  }, [user.isAuthenticated, user.isLoading, navigate]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar isSidebar={isSidebar} />
+          {user.isAuthenticated ? <Sidebar isSidebar={isSidebar} /> : null}
           <main className="content">
-            <Topbar setIsSidebar={setIsSidebar} />
+            {user.isAuthenticated ? <Topbar setIsSidebar={setIsSidebar} /> : null}
             <Routes>
+              <Route path="/login" element={<Login />} />
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
@@ -40,6 +58,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
+              <Route path="/footer" element={<Footer />} />
             </Routes>
           </main>
         </div>
