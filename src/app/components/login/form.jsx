@@ -1,22 +1,44 @@
 "use client";
+import { useState } from "react";
+import { loginUser } from "@/app/services/users/login";
 import Image from "next/image";
 import logo from "../../../assets/logo.svg";
 import mail from "../../../assets/login/mail.svg";
 import lock from "../../../assets/login/lock.svg";
 import view from "../../../assets/login/view.svg";
 import Link from "next/link";
-import { useState } from "react";
 import WithApps from "./withApps";
 import Button from "./button";
 
 export default function Form() {
-  const [password, setPassword] = useState(false);
-  const togglePassword = (e) => {
-    e.preventDefault();
-    setPassword(!password);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const validateInput = (input) => {
+    const pattern = /^[a-zA-Z0-9]+$/; // Alphanumeric characters only
+    return pattern.test(input);
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!validateInput(username) || !validateInput(password)) {
+      setError("Invalid username or password format.");
+      return;
+    }
+
+    try {
+      await loginUser(username, password);
+      window.location.href = "/";
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
-    <form className="max-md:w-[90%]">
+    <form className="max-md:w-[90%]" onSubmit={handleSubmit}>
       <div className="bg-gradient-to-r from-[#171717]  to-[#272727]  w-full flex justify-center py-5 rounded-t-xl">
         <Image width={144} height={62.4} src={logo} alt="logo" />
       </div>
@@ -27,26 +49,28 @@ export default function Form() {
             <Image src={mail} alt="mail" />
             <input
               className=" border-none bg-transparent placeholder:text-[#EAE9E9] focus:outline-none"
-              type="email"
-              placeholder="Email"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="flex bg-[#414141] rounded p-3 gap-2">
             <Image src={lock} alt="lock" />
             <input
               className="border-none bg-transparent placeholder:text-[#EAE9E9] w-[80%] focus:outline-none"
-              type={password ? "text" : "password"}
+              type="password"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={togglePassword}>
-              <Image src={view} alt="view" />
-            </button>
           </div>
         </div>
         <Link href="login/accountRecovery" className="hover:underline pt-2">
           Forgot password?
         </Link>
-        <Button path="/" mode="login" />
+        <button type="submit">Login</button>
+        {error && <div style={{ color: "red" }}>{error}</div>}
         <div>
           <div className="flex items-center justify-center md:text-sm sm:text-xs w-full pb-7">
             <input
