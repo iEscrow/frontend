@@ -1,6 +1,6 @@
 'use client'
 import { getOffers, postOffer } from "@/hooks/Offers";
-import { getBankAccount, postBankAccount } from "@/hooks/bankAccount/newBankAccount";
+import { getBankAccount, postBankAccount } from "@/app/services/bank/getBankAccounts";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 

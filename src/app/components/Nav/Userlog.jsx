@@ -23,7 +23,7 @@ const Userlog = () => {
         </li>
 
         <div className="dropdown dropdown-bottom dropdown-end">
-          <div tabindex="0" className="avatar">
+          <div tabIndex="0" className="avatar">
             <div className="w-5 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 cursor-pointer">
               <img
                 src="https://api.dicebear.com/6.x/adventurer/svg?seed=Abby"
@@ -32,7 +32,7 @@ const Userlog = () => {
             </div>
           </div>
           <ul
-            tabindex="0"
+            tabIndex="0"
             className="mt-4 dropdown-content z-[100] menu p-2 shadow bg-base-100  rounded-b-xl w-52"
           >
             <li>

@@ -1,45 +1,60 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { getBankAccount } from "@/app/services/bank/getBankAccounts";
 import arrowDown from "../../../assets/arrow-down.svg";
 import arrowUp from "../../../assets/arrow-up.svg";
 import plus from "../../../assets/btn-plus.svg";
 import Opciones from "./opciones";
-import axios from "axios";
 import { usePathname } from "next/navigation";
-const Cuenta = () => {
-  const [data, setData] = useState(null);
-  const url = usePathname()
+
+const Cuenta = ({ user }) => {
+  const [bankAccounts, setBankAccounts] = useState([]);
+  const [error, setError] = useState("");
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const url = usePathname();
+
   useEffect(() => {
-    async function fetchData() {
+    const fetchAccounts = async () => {
       try {
-        const response = await axios.get(
-          "http://3.22.169.23:3000/bank-account"
-        );
-        setData(response.data);
-      } catch (err) {
-        console.log(err);
+        const accountsData = await getBankAccount();
+        setBankAccounts(accountsData);
+      } catch (error) {
+        setError(error.message);
       }
-    }
-    fetchData();
+    };
+
+    fetchAccounts();
   }, []);
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  if (error) {
+    return <p style={{ color: "red" }}>{error}</p>;
+  }
+
+  if (bankAccounts.length === 0) {
+    return <p>No hay cuentas bancarias disponibles.</p>;
+  }
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+  
   return (
     <div className="flex dark:text-white text-dark-blue w-full justify-center">
       <div className="flex flex-col md:w-9/12">
         <div className="mb-3">
-          <p className={` sm:text-center md:text-start sm:text-sm md:text-md ${url === '/profile' && 'hidden'}`}>
+          <p
+            className={` sm:text-center md:text-start sm:text-sm md:text-md ${
+              url === "/profile" && "hidden"
+            }`}
+          >
             Selecciona la cuenta con la cual realizarás la tranferencia
-            bancaria: 
+            bancaria:
           </p>
         </div>
-        {data &&
-          data.BankAccounts.map((e, i) => {
+        {bankAccounts &&
+          bankAccounts.map((e, i) => {
             return (
               <>
                 <div className="flex justify-between">
@@ -50,7 +65,9 @@ const Cuenta = () => {
                       className="radio checked:bg-green"
                       checked
                     />
-                    <span className="label-text dark:text-white text-dark-blue">BBVA</span>
+                    <span className="label-text dark:text-white text-dark-blue">
+                      {e.Bank.name}
+                    </span>
                   </div>
                   <Opciones accion="cuenta" />
                 </div>
@@ -63,18 +80,20 @@ const Cuenta = () => {
                   <p className="text-green sm:text-sm md:text-md">
                     Titular:{" "}
                     <b className="dark:text-white text-dark-blue sm:text-sm md:text-md">
-                      {e.User_Id}
+                      {user.username}
                     </b>
                   </p>
                   <p className="text-green sm:text-sm md:text-md">
                     Nro de cuenta:{" "}
                     <b className="dark:text-white text-dark-blue sm:text-sm md:text-md">
-                      {e.Account_Number}
+                      {e.alias}
                     </b>
                   </p>
                   <p className="text-green sm:text-sm md:text-md">
                     CBU:{" "}
-                    <b className="dark:text-white text-dark-blue sm:text-sm md:text-md">{e.CBU}</b>
+                    <b className="dark:text-white text-dark-blue sm:text-sm md:text-md">
+                      {e.cbu}
+                    </b>
                   </p>
                 </div>
                 <div className="flex items-center">
@@ -126,7 +145,11 @@ const Cuenta = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Image src={plus} className="w-[20px] hidden dark:flex" alt="plus" />
+              <Image
+                src={plus}
+                className="w-[20px] hidden dark:flex"
+                alt="plus"
+              />
               <p>AGREGAR CUENTA</p>
             </label>
           </button>
