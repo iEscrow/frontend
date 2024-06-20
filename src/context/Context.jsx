@@ -29,7 +29,7 @@ export default function Provider ({children}) {
         CBU: "",
         User_Id: "5",
       });
-    const [msj, setMsj] = useState();
+    const [msj, setMsj] = useState('option1');
     const router = useRouter()
     const getOffer = async () =>{
         try {
