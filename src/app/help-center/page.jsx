@@ -140,7 +140,7 @@ export default function HelpCenter() {
         {btn.map((b, i) => (
           <div key={i} className=" flex flex-col gap-2 items-center ">
           <Link
-          href="./help-center/FAQ"
+          href={ b.value === 'option5' ? '/account/disable' : "./help-center/FAQ"}
           onClick={()=> setMsj(b.value)}
           >
             <Image src={b.img} alt={b.title} />
