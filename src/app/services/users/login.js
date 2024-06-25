@@ -6,8 +6,9 @@ export async function loginUser(username, password) {
       username,
       password,
     });
+    localStorage.setItem('token', response.data.token);
     return response;
   } catch (error) {
-    throw new Error('Error en el login');
+    throw new Error(error.response.data.error);
   }
 }

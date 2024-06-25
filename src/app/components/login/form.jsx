@@ -8,12 +8,19 @@ import lock from "../../../assets/login/lock.svg";
 import view from "../../../assets/login/view.svg";
 import Link from "next/link";
 import WithApps from "./withApps";
-import Button from "./button";
+import { useRouter } from "next/navigation";
 
 export default function Form() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [viewpassword, setViewPassword] = useState(false);
+  const togglePassword = (e) => {
+    e.preventDefault();
+    setViewPassword(!viewpassword);
+  };
+
+  const router = useRouter()
 
   const validateInput = (input) => {
     const pattern = /^[a-zA-Z0-9]+$/; // Alphanumeric characters only
@@ -24,14 +31,15 @@ export default function Form() {
     e.preventDefault();
     setError("");
 
-    if (!validateInput(username) || !validateInput(password)) {
+    if (!validateInput(username)) {
       setError("Invalid username or password format.");
       return;
     }
 
     try {
       await loginUser(username, password);
-      window.location.href = "/";
+      router.push("/marketplace")
+      
     } catch (error) {
       setError(error.message);
     }
@@ -59,17 +67,20 @@ export default function Form() {
             <Image src={lock} alt="lock" />
             <input
               className="border-none bg-transparent placeholder:text-[#EAE9E9] w-[80%] focus:outline-none"
-              type="password"
+              type={viewpassword ? "text" : "password"}
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button onClick={togglePassword}>
+              <Image src={view} alt="view" />
+            </button>
           </div>
         </div>
         <Link href="login/accountRecovery" className="hover:underline pt-2">
           Forgot password?
         </Link>
-        <button type="submit">Login</button>
+        <button type="submit" className="bg-blue-2 py-2 px-14 rounded-[22px] font-bold shadow-xl mt-6 mb-2 uppercase" >Login</button>
         {error && <div style={{ color: "red" }}>{error}</div>}
         <div>
           <div className="flex items-center justify-center md:text-sm sm:text-xs w-full pb-7">
